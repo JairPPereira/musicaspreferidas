@@ -1,0 +1,1933 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#7ac525" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#7ac525" />
+  <meta name="msapplication-navbutton-color" content="#7ac525" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Minha Lista de Radios preferidas</title>
+  <link href="./video-js.css" rel="stylesheet">
+  <link href="./videojs-mobile-ui.css" rel="stylesheet">
+  <link href="videojs-playlist-ui.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #7ac525;
+      width: auto;
+      height: auto;
+    }
+  </style>
+  <style>
+    .testEl {
+      width: 10%;
+      height: 10%;
+      position: absolute;
+      top: 0;
+      pointer-events: none;
+      display: none;
+    }
+  </style>
+
+</head>
+
+
+<body> 
+  <div class="player-container" width="100%">
+
+    <video-js id="videojs-mobile-ui-player" class="video-js vjs-fluid vjs-big-play-centered vjs-default-skin" controls playsinline
+      poster="https://1.bp.blogspot.com/-0uKfHzS4A9c/YTzZb9cssjI/AAAAAAAABDw/d9vt-Y4wGTgOwwwhmu_qer1qaI1W8XmcwCLcBGAsYHQ/s200/radioclube.jpeg">
+      <source src="https://ice01.kshost.com.br:8000/live" type='audio/mpeg'>
+      <source src="https://ice01.kshost.com.br:8000/live" type='audio/ogg'>
+
+
+
+    </video-js>
+
+
+
+
+    <center>
+      <h1>Rádios preferidas</h1>
+    </center>
+    <div class="vjs-playlist" position="responsive">
+      <!--
+                      The contents of this element will be filled based on the
+                      currently loaded playlist
+                    -->
+    </div>
+
+    <script src="./video.js"></script>
+    <script src="./videojs-mobile-ui.js"></script>
+    <script src="videojs-playlist.js"></script>
+    <script src="videojs-playlist-ui.js"></script>
+
+    <script>
+      var player = videojs('videojs-mobile-ui-player', {
+
+
+        fluid: true,
+        controls: true,
+        aspectRatio: '4:4',
+
+
+
+      },
+
+      );
+
+
+
+      player.playlist([
+
+      {
+        name: 'Rádio Clube AM',
+
+        sources: [
+          { src: 'https://ice01.kshost.com.br:8000/live', type: 'audio/mpeg' },
+          { src: 'https://ice01.kshost.com.br:8000/live', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://1.bp.blogspot.com/-0uKfHzS4A9c/YTzZb9cssjI/AAAAAAAABDw/d9vt-Y4wGTgOwwwhmu_qer1qaI1W8XmcwCLcBGAsYHQ/s200/radioclube.jpeg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://1.bp.blogspot.com/-0uKfHzS4A9c/YTzZb9cssjI/AAAAAAAABDw/d9vt-Y4wGTgOwwwhmu_qer1qaI1W8XmcwCLcBGAsYHQ/s200/radioclube.jpeg'
+          }
+        ],
+        poster: 'https://1.bp.blogspot.com/-0uKfHzS4A9c/YTzZb9cssjI/AAAAAAAABDw/d9vt-Y4wGTgOwwwhmu_qer1qaI1W8XmcwCLcBGAsYHQ/s200/radioclube.jpeg'
+      },
+
+      {
+        name: 'Rádio Marajoara AM',
+
+        sources: [
+          { src: 'https://www.bravecenterhost.com:8020/stream', type: 'audio/mpeg' },
+          { src: 'https://www.bravecenterhost.com:8020/stream', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://1.bp.blogspot.com/-FJl5s36LyDw/YTzildRU7OI/AAAAAAAABD4/qnsZGumcaDUb_GuYQpAFnz4iXJUWlqN9QCLcBGAsYHQ/s200/marajoara.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://1.bp.blogspot.com/-FJl5s36LyDw/YTzildRU7OI/AAAAAAAABD4/qnsZGumcaDUb_GuYQpAFnz4iXJUWlqN9QCLcBGAsYHQ/s200/marajoara.jpg'
+          }
+        ],
+        poster: 'https://1.bp.blogspot.com/-FJl5s36LyDw/YTzildRU7OI/AAAAAAAABD4/qnsZGumcaDUb_GuYQpAFnz4iXJUWlqN9QCLcBGAsYHQ/s200/marajoara.jpg'
+      },
+
+
+      {
+        name: 'Rádio Rauland FM',
+
+        sources: [
+          { src: 'https://stm1.srvif.com:6672/;?1614959595633', type: 'audio/mpeg' },
+          { src: 'https://stm1.srvif.com:6672/;?1614959595633', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://1.bp.blogspot.com/-TGdVG07kU6s/YUFq5Toxe9I/AAAAAAAABFY/-X_xXV09DkcTfBPs2C7Oi7x7mIDuG5BAwCLcBGAsYHQ/s0/rauland.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://1.bp.blogspot.com/-TGdVG07kU6s/YUFq5Toxe9I/AAAAAAAABFY/-X_xXV09DkcTfBPs2C7Oi7x7mIDuG5BAwCLcBGAsYHQ/s0/rauland.jpg'
+          }
+        ],
+        poster: 'https://1.bp.blogspot.com/-TGdVG07kU6s/YUFq5Toxe9I/AAAAAAAABFY/-X_xXV09DkcTfBPs2C7Oi7x7mIDuG5BAwCLcBGAsYHQ/s0/rauland.jpg'
+      },
+
+      
+      {
+        name: 'Rádio Libmusic Web',
+
+        sources: [
+          { src: 'https://s09.maxcast.com.br:8122/live', type: 'audio/mpeg' },
+          { src: 'https://s09.maxcast.com.br:8122/live', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgObDmk-UjKe-COcjvnhLIlCJwteNFN4G_yD8evP1ltBH9ob3ka9cTaZACo4bPrL2sJpRHbc1fn04XwYFSmxhBnMdcKAHZerhYJDxBYs0W4h4aLlIuHveREICMABQJUO0f0XZrR9dQrSf_D_nn0vRegS85MDLUVG3u3-2cdPeCzRa6W7bi98EC1n_0d/s1600/libradio200.JPG',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgObDmk-UjKe-COcjvnhLIlCJwteNFN4G_yD8evP1ltBH9ob3ka9cTaZACo4bPrL2sJpRHbc1fn04XwYFSmxhBnMdcKAHZerhYJDxBYs0W4h4aLlIuHveREICMABQJUO0f0XZrR9dQrSf_D_nn0vRegS85MDLUVG3u3-2cdPeCzRa6W7bi98EC1n_0d/s1600/libradio200.JPG'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgObDmk-UjKe-COcjvnhLIlCJwteNFN4G_yD8evP1ltBH9ob3ka9cTaZACo4bPrL2sJpRHbc1fn04XwYFSmxhBnMdcKAHZerhYJDxBYs0W4h4aLlIuHveREICMABQJUO0f0XZrR9dQrSf_D_nn0vRegS85MDLUVG3u3-2cdPeCzRa6W7bi98EC1n_0d/s1600/libradio200.JPG'
+      },
+               
+      
+      {
+        name: 'Rádio Diário FM',
+
+        sources: [
+          { src: 'https://hts02.kshost.com.br:8856/live', type: 'audio/mpeg' },
+          { src: 'https://hts02.kshost.com.br:8856/live', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/a/AVvXsEgOnuvLYhLtmyt9WmJN32_i2wPeOJbfPatLtatxUksLhD_Nev7v5saLrwWbMxPfyUYysEKcRxTc1R1cS-HYBxwFocsyOC0ASMSvtiNt96hpc_WoYJvOSidyLrHXMySg9iXACIya2niAHUlBAw_pLkO9BWGUFnWWjRvTM6sTDcLv6cyRRRoyott82Vnz=s200',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/a/AVvXsEgOnuvLYhLtmyt9WmJN32_i2wPeOJbfPatLtatxUksLhD_Nev7v5saLrwWbMxPfyUYysEKcRxTc1R1cS-HYBxwFocsyOC0ASMSvtiNt96hpc_WoYJvOSidyLrHXMySg9iXACIya2niAHUlBAw_pLkO9BWGUFnWWjRvTM6sTDcLv6cyRRRoyott82Vnz=s200'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/a/AVvXsEgOnuvLYhLtmyt9WmJN32_i2wPeOJbfPatLtatxUksLhD_Nev7v5saLrwWbMxPfyUYysEKcRxTc1R1cS-HYBxwFocsyOC0ASMSvtiNt96hpc_WoYJvOSidyLrHXMySg9iXACIya2niAHUlBAw_pLkO9BWGUFnWWjRvTM6sTDcLv6cyRRRoyott82Vnz=s200'
+      }, 
+      
+      {
+        name: 'Rádio 99 FM',
+
+        sources: [
+          { src: 'https://hts02.kshost.com.br:8862/live', type: 'audio/mpeg' },
+          { src: 'https://hts02.kshost.com.br:8862/live', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/a/AVvXsEgUu4NGgas5-F2I9qmDNFWzZGLtPwkQzLNX7bLrEMRGKN1U8-Vdmu42-BGGDfS8bCfQwQ5pxoMZAVSadOO-DNNZrEiadzA0F-IfWgdLlBql9GkB13datNJiEPEephvF9VDF0seTGom22RWI9I2LupC_vEcdgznRRHLhSItPnn7-FE83k7B91sQJ8GAy=s200',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/a/AVvXsEgUu4NGgas5-F2I9qmDNFWzZGLtPwkQzLNX7bLrEMRGKN1U8-Vdmu42-BGGDfS8bCfQwQ5pxoMZAVSadOO-DNNZrEiadzA0F-IfWgdLlBql9GkB13datNJiEPEephvF9VDF0seTGom22RWI9I2LupC_vEcdgznRRHLhSItPnn7-FE83k7B91sQJ8GAy=s200'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/a/AVvXsEgUu4NGgas5-F2I9qmDNFWzZGLtPwkQzLNX7bLrEMRGKN1U8-Vdmu42-BGGDfS8bCfQwQ5pxoMZAVSadOO-DNNZrEiadzA0F-IfWgdLlBql9GkB13datNJiEPEephvF9VDF0seTGom22RWI9I2LupC_vEcdgznRRHLhSItPnn7-FE83k7B91sQJ8GAy=s200'
+      },       
+
+     
+      
+      {
+        name: 'Rádio Cabana 87.9 FM de Ananindeua',
+
+        sources: [
+          { src: 'https://ssl.xcast.com.br:7396/mountpoint', type: 'audio/mpeg' },
+          { src: 'https://ssl.xcast.com.br:7396/mountpoint', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijMnhcwDUHaVugEJWy3Y1CXkwMtZN1EnyuOJ4JzcKewlE_djg-agH5S5A8aYCUFzQ6ezgcqqqZQMoSn6A9fusTpd4mLZ1UyLo_fX9IyJGgBo5dpaZ3m-fEIz6CJJlpEl5ApoxfaY5462GY2JZK8iAfi6l8eppjHloJjUPjvrsxqPL0KUP4DULdsTTL/s1600/radiocabana.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijMnhcwDUHaVugEJWy3Y1CXkwMtZN1EnyuOJ4JzcKewlE_djg-agH5S5A8aYCUFzQ6ezgcqqqZQMoSn6A9fusTpd4mLZ1UyLo_fX9IyJGgBo5dpaZ3m-fEIz6CJJlpEl5ApoxfaY5462GY2JZK8iAfi6l8eppjHloJjUPjvrsxqPL0KUP4DULdsTTL/s1600/radiocabana.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijMnhcwDUHaVugEJWy3Y1CXkwMtZN1EnyuOJ4JzcKewlE_djg-agH5S5A8aYCUFzQ6ezgcqqqZQMoSn6A9fusTpd4mLZ1UyLo_fX9IyJGgBo5dpaZ3m-fEIz6CJJlpEl5ApoxfaY5462GY2JZK8iAfi6l8eppjHloJjUPjvrsxqPL0KUP4DULdsTTL/s1600/radiocabana.webp'
+      }, 
+
+      {
+        name: 'Rádio O dia-RJ FM',
+
+        sources: [
+          { src: 'https://streaming.livespanel.com:20000/live', type: 'audio/mpeg' },
+          { src: 'https://streaming.livespanel.com:20000/live', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/a/AVvXsEieZi7H_-NWRjTorNf0vOfeyD9mxKVP09hwNrHPhRpvyng2VVIkv-GK4EnpGvtrNwsUkT2MFRjOVhYzUtsFHZaNSGAefSEgGigrpaXrPgkexKrU6kxaDH6XBiQRjAOsJqb4JdI03BeA2Vr_4dq_9ggP7XpzcV_gYNkFlbQYA8X8SVb1WacFAmS3KgE5',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/a/AVvXsEieZi7H_-NWRjTorNf0vOfeyD9mxKVP09hwNrHPhRpvyng2VVIkv-GK4EnpGvtrNwsUkT2MFRjOVhYzUtsFHZaNSGAefSEgGigrpaXrPgkexKrU6kxaDH6XBiQRjAOsJqb4JdI03BeA2Vr_4dq_9ggP7XpzcV_gYNkFlbQYA8X8SVb1WacFAmS3KgE5'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/a/AVvXsEieZi7H_-NWRjTorNf0vOfeyD9mxKVP09hwNrHPhRpvyng2VVIkv-GK4EnpGvtrNwsUkT2MFRjOVhYzUtsFHZaNSGAefSEgGigrpaXrPgkexKrU6kxaDH6XBiQRjAOsJqb4JdI03BeA2Vr_4dq_9ggP7XpzcV_gYNkFlbQYA8X8SVb1WacFAmS3KgE5'
+      },      
+
+      {
+        name: 'Rádio Alpha-SP FM',
+
+        sources: [
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ALPHAFM_ADP.aac', type: 'audio/mpeg' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ALPHAFM_ADP.aac', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiG4qffFuSOiLepJ7Y1J7SGFTNUuMZWei_X3-062tD7ZcljtZboVn_CJwc_dwz8LIKItGsIktaq56XCEwbsazFI3N1OzubQkb9dEENWwJ2flvb9F0737tgcD4nPQ7gXYF7cGMmrQcWXB-i3Wrey6pOMwNkZXj4QFp9OlZy95b_dvd8HaMyLzrGnVgat/s1600/alphafm2.png',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiG4qffFuSOiLepJ7Y1J7SGFTNUuMZWei_X3-062tD7ZcljtZboVn_CJwc_dwz8LIKItGsIktaq56XCEwbsazFI3N1OzubQkb9dEENWwJ2flvb9F0737tgcD4nPQ7gXYF7cGMmrQcWXB-i3Wrey6pOMwNkZXj4QFp9OlZy95b_dvd8HaMyLzrGnVgat/s1600/alphafm2.png'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiG4qffFuSOiLepJ7Y1J7SGFTNUuMZWei_X3-062tD7ZcljtZboVn_CJwc_dwz8LIKItGsIktaq56XCEwbsazFI3N1OzubQkb9dEENWwJ2flvb9F0737tgcD4nPQ7gXYF7cGMmrQcWXB-i3Wrey6pOMwNkZXj4QFp9OlZy95b_dvd8HaMyLzrGnVgat/s1600/alphafm2.png'
+      },  
+      
+      {
+        name: 'Rádio Band-SP FM',
+
+        sources: [
+          { src: 'https://r15.ciclano.io:14359/live', type: 'audio/mpeg' },
+          { src: 'https://r15.ciclano.io:14359/live', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgITl5lcEbzscj6g1AW4olkmKz_sd3Rp5WJLcscPKejr9CiRcoaHQYhbZrvwGXxEL915gSRT9UEWxjOY50lfau6m748Y4ZhmUlGT47ufdheKFOmg9EPaaDO2elzSImr7dHFhRUDOP14F2S34ZUmRqA0b2NWrf1OUFyEfQAUq6WaVm5eiqYd9KbmvUaR/s1600/bandfmsp2.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgITl5lcEbzscj6g1AW4olkmKz_sd3Rp5WJLcscPKejr9CiRcoaHQYhbZrvwGXxEL915gSRT9UEWxjOY50lfau6m748Y4ZhmUlGT47ufdheKFOmg9EPaaDO2elzSImr7dHFhRUDOP14F2S34ZUmRqA0b2NWrf1OUFyEfQAUq6WaVm5eiqYd9KbmvUaR/s1600/bandfmsp2.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgITl5lcEbzscj6g1AW4olkmKz_sd3Rp5WJLcscPKejr9CiRcoaHQYhbZrvwGXxEL915gSRT9UEWxjOY50lfau6m748Y4ZhmUlGT47ufdheKFOmg9EPaaDO2elzSImr7dHFhRUDOP14F2S34ZUmRqA0b2NWrf1OUFyEfQAUq6WaVm5eiqYd9KbmvUaR/s1600/bandfmsp2.jpg'
+      }, 
+      
+      {
+        name: 'Rádio Nativa-SP FM',
+
+        sources: [
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/NATIVA_SP.mp3', type: 'audio/mpeg' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/NATIVA_SP.mp3', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXS6vglgA2UQcU37Qnjf3S9hVJqzg4TXCTvVJ1DBliEi2XllZFaJ7gX9yNc_HAvbrMdh3SADR-U8bWbl3Y_31FocxWlDJtwYnDQhbXnTN_dSmDMrWQwhvPlM1I0exXIvEcazbQQ3ClYgH2V7SayLKYbzj8Cts4V66haZMgpS8Sepm4UrGwyGb2KNLH/s1600/nativa%20fm2.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXS6vglgA2UQcU37Qnjf3S9hVJqzg4TXCTvVJ1DBliEi2XllZFaJ7gX9yNc_HAvbrMdh3SADR-U8bWbl3Y_31FocxWlDJtwYnDQhbXnTN_dSmDMrWQwhvPlM1I0exXIvEcazbQQ3ClYgH2V7SayLKYbzj8Cts4V66haZMgpS8Sepm4UrGwyGb2KNLH/s1600/nativa%20fm2.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXS6vglgA2UQcU37Qnjf3S9hVJqzg4TXCTvVJ1DBliEi2XllZFaJ7gX9yNc_HAvbrMdh3SADR-U8bWbl3Y_31FocxWlDJtwYnDQhbXnTN_dSmDMrWQwhvPlM1I0exXIvEcazbQQ3ClYgH2V7SayLKYbzj8Cts4V66haZMgpS8Sepm4UrGwyGb2KNLH/s1600/nativa%20fm2.jpg'
+      }, 
+      
+      {
+        name: 'Rádio Antena 1 Fm do RJ',
+
+        sources: [
+          { src: 'https://antenaone.crossradio.com.br/stream/1', type: 'audio/mpeg' },
+          { src: 'https://antenaone.crossradio.com.br/stream/1', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuPmK1fHxlONjveSA4QRFWYgT_5Tf4T7-OahYB2cO_9ZejZG-rD2DHokQqLTfyCKZJM7O7e051s7rXv8uyJ0vJ18e08ZNXEtcwU3oYtBlMIHHn4aow0KmZkxpZOStEZEFvnoWuWTQUB0WK_xrmK7iAfhQ654NWMid6Fxi3Ghie528_k0weXVVGeUcr/s1600/antena12.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuPmK1fHxlONjveSA4QRFWYgT_5Tf4T7-OahYB2cO_9ZejZG-rD2DHokQqLTfyCKZJM7O7e051s7rXv8uyJ0vJ18e08ZNXEtcwU3oYtBlMIHHn4aow0KmZkxpZOStEZEFvnoWuWTQUB0WK_xrmK7iAfhQ654NWMid6Fxi3Ghie528_k0weXVVGeUcr/s1600/antena12.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuPmK1fHxlONjveSA4QRFWYgT_5Tf4T7-OahYB2cO_9ZejZG-rD2DHokQqLTfyCKZJM7O7e051s7rXv8uyJ0vJ18e08ZNXEtcwU3oYtBlMIHHn4aow0KmZkxpZOStEZEFvnoWuWTQUB0WK_xrmK7iAfhQ654NWMid6Fxi3Ghie528_k0weXVVGeUcr/s1600/antena12.jpg'
+      }, 
+      
+      {
+        name: 'Rádio JB Fm do RJ',
+
+        sources: [
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/JBFM.mp3', type: 'audio/mpeg' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/JBFM.mp3', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj99vYyPVibkHc7y71tKHT9o8EGKsAADj112XjMRmMMfRfSp28GzKinE7OZa4g80haKHu1tpCmUV96DdiIEzBUSu54GRp8zxIldiRLIyWovuER8eejAapeGxQHolar5BS3vVO3yEmujCzFFnq-2eHCfb06rvc_08fekH2rKFtF8cQU2GenRxvkF8Xmq/s1600/radio_jbfm999rj.png',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj99vYyPVibkHc7y71tKHT9o8EGKsAADj112XjMRmMMfRfSp28GzKinE7OZa4g80haKHu1tpCmUV96DdiIEzBUSu54GRp8zxIldiRLIyWovuER8eejAapeGxQHolar5BS3vVO3yEmujCzFFnq-2eHCfb06rvc_08fekH2rKFtF8cQU2GenRxvkF8Xmq/s1600/radio_jbfm999rj.png'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj99vYyPVibkHc7y71tKHT9o8EGKsAADj112XjMRmMMfRfSp28GzKinE7OZa4g80haKHu1tpCmUV96DdiIEzBUSu54GRp8zxIldiRLIyWovuER8eejAapeGxQHolar5BS3vVO3yEmujCzFFnq-2eHCfb06rvc_08fekH2rKFtF8cQU2GenRxvkF8Xmq/s1600/radio_jbfm999rj.png'
+      },  
+
+            {
+        name: 'Rádio Globo FM de Salvador',
+
+        sources: [
+          { src: 'https://r6.ciclano.io:15062/stream', type: 'audio/mpeg' },
+          { src: 'https://r6.ciclano.io:15062/stream', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicDYtg_M304Iv-WnYe7kKCdkff-dtxaC7SJg4FXDTQv0WxF0JwHnJYgz9qYSBF6mAQ6x3SCMEyhJwYdNhkcwoaUrgfevxdy8nBZmhudCJXBAvXxsAtxWaosCkLos29KnBeFmQkr8wzDFz7aWASfozWiug667wcTXb2FnQZ1kt9O3HhiWzJJzs6Lh1N/s1600/globofm2.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicDYtg_M304Iv-WnYe7kKCdkff-dtxaC7SJg4FXDTQv0WxF0JwHnJYgz9qYSBF6mAQ6x3SCMEyhJwYdNhkcwoaUrgfevxdy8nBZmhudCJXBAvXxsAtxWaosCkLos29KnBeFmQkr8wzDFz7aWASfozWiug667wcTXb2FnQZ1kt9O3HhiWzJJzs6Lh1N/s1600/globofm2.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicDYtg_M304Iv-WnYe7kKCdkff-dtxaC7SJg4FXDTQv0WxF0JwHnJYgz9qYSBF6mAQ6x3SCMEyhJwYdNhkcwoaUrgfevxdy8nBZmhudCJXBAvXxsAtxWaosCkLos29KnBeFmQkr8wzDFz7aWASfozWiug667wcTXb2FnQZ1kt9O3HhiWzJJzs6Lh1N/s1600/globofm2.jpg'
+      }, 
+
+      {
+        name: 'Rádio Globo RJ 98.1 FM de RJ',
+
+        sources: [
+        { src: 'https://medias.sgr.globo.com/hls/aRGloboRJ/aRGloboRJ.m3u8', type: 'application/x-mpegurl'},
+        { src: 'https://medias.sgr.globo.com/hls/aRGloboRJ/aRGloboRJ.m3u8', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9ZU0Z_D_tKsFUXJqTvhsFKmaNNUn6gJ6WPo1836JYop6U4wqpK29p4Z2Ueu5gsvGSANeV9t_miBa1s4gMHnr3zQ93AIjVYfO1FLEfFjtlX1NC-WrZFxM4-4rT50QJpj6Uc7tg6TA6jic78GqxAL6W5xaRBLX_opBpJNgt6EDt1YFr5IJyfIv2E0a0/s1600/radioglobo.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9ZU0Z_D_tKsFUXJqTvhsFKmaNNUn6gJ6WPo1836JYop6U4wqpK29p4Z2Ueu5gsvGSANeV9t_miBa1s4gMHnr3zQ93AIjVYfO1FLEfFjtlX1NC-WrZFxM4-4rT50QJpj6Uc7tg6TA6jic78GqxAL6W5xaRBLX_opBpJNgt6EDt1YFr5IJyfIv2E0a0/s1600/radioglobo.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9ZU0Z_D_tKsFUXJqTvhsFKmaNNUn6gJ6WPo1836JYop6U4wqpK29p4Z2Ueu5gsvGSANeV9t_miBa1s4gMHnr3zQ93AIjVYfO1FLEfFjtlX1NC-WrZFxM4-4rT50QJpj6Uc7tg6TA6jic78GqxAL6W5xaRBLX_opBpJNgt6EDt1YFr5IJyfIv2E0a0/s1600/radioglobo.webp'
+      }, 
+
+      {
+        name: 'Rádio Alvorada FM de Belo Horizonte',
+
+        sources: [
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ALVORADAAAC.aac', type: 'audio/mpeg' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ALVORADAAAC.aac', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYq_jVoxSkeDW5SZcHcbIIz1DFi4ZKfyfuVlLM401iC1jkXT4-SiKh5u18E8QrlFMJ0rw-0B-Emho-buI-BIyMT2On-vacFemjFp8ba4I7OiPEJzaAhbnLMWIdmhjDBtE1k4brqeonTyK395ensuWktGYEZYrPxO_XrpnxSuOsy0NuswtEXbafMhc-/s1600/alvoradofm2.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYq_jVoxSkeDW5SZcHcbIIz1DFi4ZKfyfuVlLM401iC1jkXT4-SiKh5u18E8QrlFMJ0rw-0B-Emho-buI-BIyMT2On-vacFemjFp8ba4I7OiPEJzaAhbnLMWIdmhjDBtE1k4brqeonTyK395ensuWktGYEZYrPxO_XrpnxSuOsy0NuswtEXbafMhc-/s1600/alvoradofm2.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYq_jVoxSkeDW5SZcHcbIIz1DFi4ZKfyfuVlLM401iC1jkXT4-SiKh5u18E8QrlFMJ0rw-0B-Emho-buI-BIyMT2On-vacFemjFp8ba4I7OiPEJzaAhbnLMWIdmhjDBtE1k4brqeonTyK395ensuWktGYEZYrPxO_XrpnxSuOsy0NuswtEXbafMhc-/s1600/alvoradofm2.webp'
+      },       
+      
+      {
+        name: 'Rádio Mix FM RJ',
+
+        sources: [
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/MIXRIOAAC.aac', type: 'audio/mpeg' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/MIXRIOAAC.aac', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF56Sqfm2WZk30P5WEUwLJePPlPgWpljggHWwJWCtd6VVvhvLNiKEDRGMNG2mcGZ3wVXkjW7usTncLml_Fd_EzcAtcXhXLy2wr5YGmpxHnFPQU05v4m-dyEhCdoAyWzcYmQ8kDKBhR3PZIrnFdRztZfuqWzAPzuT-wo6oPg2q1qnmb-8yo8Hbj9Z_q/s1600/mixrio2.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF56Sqfm2WZk30P5WEUwLJePPlPgWpljggHWwJWCtd6VVvhvLNiKEDRGMNG2mcGZ3wVXkjW7usTncLml_Fd_EzcAtcXhXLy2wr5YGmpxHnFPQU05v4m-dyEhCdoAyWzcYmQ8kDKBhR3PZIrnFdRztZfuqWzAPzuT-wo6oPg2q1qnmb-8yo8Hbj9Z_q/s1600/mixrio2.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF56Sqfm2WZk30P5WEUwLJePPlPgWpljggHWwJWCtd6VVvhvLNiKEDRGMNG2mcGZ3wVXkjW7usTncLml_Fd_EzcAtcXhXLy2wr5YGmpxHnFPQU05v4m-dyEhCdoAyWzcYmQ8kDKBhR3PZIrnFdRztZfuqWzAPzuT-wo6oPg2q1qnmb-8yo8Hbj9Z_q/s1600/mixrio2.jpg'
+      },  
+
+      {
+        name: 'Rádio Massa Fm de Rio de Curitiba',
+
+        sources: [
+          { src: 'https://stm01.virtualcast.com.br:8118/live', type: 'audio/mpeg' },
+          { src: 'https://stm01.virtualcast.com.br:8118/live', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQ65uUiZo28p4mu-Jgc5QtFND4RvOHn2g3rgWY5Q1b_94Z12ugzT8-TU_F5yaH8m6g1FY620yDjOt1Nnk3xeQvTTvOAhyrdBSRiJ5fgUzM1ukuIceBqvp9UKA6keHvq2rtyv06aqauwwE-0G6v2bHn4RHl30SzuCTa-1q-_3PpwP8CKmD5GYggzn_d/s1600/massafm2.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQ65uUiZo28p4mu-Jgc5QtFND4RvOHn2g3rgWY5Q1b_94Z12ugzT8-TU_F5yaH8m6g1FY620yDjOt1Nnk3xeQvTTvOAhyrdBSRiJ5fgUzM1ukuIceBqvp9UKA6keHvq2rtyv06aqauwwE-0G6v2bHn4RHl30SzuCTa-1q-_3PpwP8CKmD5GYggzn_d/s1600/massafm2.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQ65uUiZo28p4mu-Jgc5QtFND4RvOHn2g3rgWY5Q1b_94Z12ugzT8-TU_F5yaH8m6g1FY620yDjOt1Nnk3xeQvTTvOAhyrdBSRiJ5fgUzM1ukuIceBqvp9UKA6keHvq2rtyv06aqauwwE-0G6v2bHn4RHl30SzuCTa-1q-_3PpwP8CKmD5GYggzn_d/s1600/massafm2.jpg'
+      }, 
+      
+      {
+        name: 'Rádio Itapoan Fm de Salvador',
+
+        sources: [
+          { src: 'https://player.radiu.live/proxy/9300', type: 'audio/mpeg' },
+          { src: 'https://player.radiu.live/proxy/9300', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2u0tp17zRCaV0FJAydWWL4V3Ni2XVSqS2CHB8smB5FRuuivDWE38TLBGhfosQ5JXcmghjmG93698P3SVlT8SUMs0i0toIIy5DbZghCH-JirGm-x7urro-kR3N3zaYWomxueh8caqUfTzSKC9Kyoew7nVe8qsAmILjY99hhoSM28b56qAtaL2TPFbF/s1600/radio_itapoanfm975.png',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2u0tp17zRCaV0FJAydWWL4V3Ni2XVSqS2CHB8smB5FRuuivDWE38TLBGhfosQ5JXcmghjmG93698P3SVlT8SUMs0i0toIIy5DbZghCH-JirGm-x7urro-kR3N3zaYWomxueh8caqUfTzSKC9Kyoew7nVe8qsAmILjY99hhoSM28b56qAtaL2TPFbF/s1600/radio_itapoanfm975.png'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2u0tp17zRCaV0FJAydWWL4V3Ni2XVSqS2CHB8smB5FRuuivDWE38TLBGhfosQ5JXcmghjmG93698P3SVlT8SUMs0i0toIIy5DbZghCH-JirGm-x7urro-kR3N3zaYWomxueh8caqUfTzSKC9Kyoew7nVe8qsAmILjY99hhoSM28b56qAtaL2TPFbF/s1600/radio_itapoanfm975.png'
+      },  
+      
+      {
+        name: 'Rádio Liderança Fm de Fortaleza',
+
+        sources: [
+          { src: 'https://webradio.amsolution.com.br/radio/8320/lideranca', type: 'audio/mpeg' },
+          { src: 'https://webradio.amsolution.com.br/radio/8320/lideranca', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCXbz50xLjeKTfh_QTMAq0USeydu6ul4N2OR3kBi-jm6kmux53vPEb76p2hkklM49oPELRtvzNYv6oEJ9Z9TMLO7Bs5LoxiisAo7o5kWUvSn-hCdiyr13cvGFoaNc6Vt1PJ1ZxWjH5xggml-ShXqj25A9iVKuYDjgQVeMFKRFdScMSMP6_cfO1qKa1/s1600/lideran%C3%A7afm2.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCXbz50xLjeKTfh_QTMAq0USeydu6ul4N2OR3kBi-jm6kmux53vPEb76p2hkklM49oPELRtvzNYv6oEJ9Z9TMLO7Bs5LoxiisAo7o5kWUvSn-hCdiyr13cvGFoaNc6Vt1PJ1ZxWjH5xggml-ShXqj25A9iVKuYDjgQVeMFKRFdScMSMP6_cfO1qKa1/s1600/lideran%C3%A7afm2.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCXbz50xLjeKTfh_QTMAq0USeydu6ul4N2OR3kBi-jm6kmux53vPEb76p2hkklM49oPELRtvzNYv6oEJ9Z9TMLO7Bs5LoxiisAo7o5kWUvSn-hCdiyr13cvGFoaNc6Vt1PJ1ZxWjH5xggml-ShXqj25A9iVKuYDjgQVeMFKRFdScMSMP6_cfO1qKa1/s1600/lideran%C3%A7afm2.webp'
+      }, 
+
+      {
+        name: 'Rádio Clube Fm de Brasilia',
+
+        sources: [
+          { src: 'https://ice.fabricahost.com.br/clubefm1055bsb', type: 'audio/mpeg' },
+          { src: 'https://ice.fabricahost.com.br/clubefm1055bsb', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhpRAahxf2VYssm7ocIIFX6yv1MgMX5hdYSsgvD_EDcl7kotXMjOS9_h56obIaEcdcGdy77C0YRgg6Rf8HAcOY0_QbrGpv5u1qBh-LC5UR5SxJaEj1eDTzQbbiasfmb9jCOGG8qj17AgJ2xG01TBI_a0TjehmAl48sK1kJ8V8Y9Mrzup3y-N0dvXluX/s1600/clubebrasilia.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhpRAahxf2VYssm7ocIIFX6yv1MgMX5hdYSsgvD_EDcl7kotXMjOS9_h56obIaEcdcGdy77C0YRgg6Rf8HAcOY0_QbrGpv5u1qBh-LC5UR5SxJaEj1eDTzQbbiasfmb9jCOGG8qj17AgJ2xG01TBI_a0TjehmAl48sK1kJ8V8Y9Mrzup3y-N0dvXluX/s1600/clubebrasilia.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhpRAahxf2VYssm7ocIIFX6yv1MgMX5hdYSsgvD_EDcl7kotXMjOS9_h56obIaEcdcGdy77C0YRgg6Rf8HAcOY0_QbrGpv5u1qBh-LC5UR5SxJaEj1eDTzQbbiasfmb9jCOGG8qj17AgJ2xG01TBI_a0TjehmAl48sK1kJ8V8Y9Mrzup3y-N0dvXluX/s1600/clubebrasilia.webp'
+      },   
+      
+      {
+        name: 'Rádio Caiobá Fm de Curitiba',
+
+        sources: [
+          { src: 'https://servidor35.brlogic.com:7094/live', type: 'audio/mpeg' },
+          { src: 'https://servidor35.brlogic.com:7094/live', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEig85xI8KCL4-NtOFrVC0e8zngYfuYFno3--tFBjvzC0hBgrCyaQ9MOaH_ud0Fz5ulSZGi0kGtoC1keBlk84TaPNW9jw7_6vZWz0Sz4WF61qkF1gzwSbwyclMmCkjMnJkYFglvNwn2eb_QH-tDkMSNaa_HRmktIRgldV97VEegNS17Z8MlMeWTeZ0Wr/s1600/caiobafm200.png',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEig85xI8KCL4-NtOFrVC0e8zngYfuYFno3--tFBjvzC0hBgrCyaQ9MOaH_ud0Fz5ulSZGi0kGtoC1keBlk84TaPNW9jw7_6vZWz0Sz4WF61qkF1gzwSbwyclMmCkjMnJkYFglvNwn2eb_QH-tDkMSNaa_HRmktIRgldV97VEegNS17Z8MlMeWTeZ0Wr/s1600/caiobafm200.png'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEig85xI8KCL4-NtOFrVC0e8zngYfuYFno3--tFBjvzC0hBgrCyaQ9MOaH_ud0Fz5ulSZGi0kGtoC1keBlk84TaPNW9jw7_6vZWz0Sz4WF61qkF1gzwSbwyclMmCkjMnJkYFglvNwn2eb_QH-tDkMSNaa_HRmktIRgldV97VEegNS17Z8MlMeWTeZ0Wr/s1600/caiobafm200.png'
+      },
+      
+      {
+        name: 'Rádio 98 Fm de Belo Horizonte',
+
+        sources: [
+          { src: 'https://9554.brasilstream.com.br/stream', type: 'audio/mpeg' },
+          { src: 'https://9554.brasilstream.com.br/stream', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1KT2mxZa9EgRmHg49gYJWhtuonsy-Q4-N1jnapl_CvLCNHU8Y7gO7h2CCzCadWmlKhOLYR4uu71QsOVsSPPvzZ0ZUFK0hjat0waJg6dxbg51GybS4R6eBcrFKbzKb7JWeW5W7FjKgepPI1IcQHBEDHK6wHAMOX6srIRQY03zlH1uZ04bQDgLXh-9y/s1600/R%C3%A1dio_98_FM_98.3_FM_Belo_Horizonte.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1KT2mxZa9EgRmHg49gYJWhtuonsy-Q4-N1jnapl_CvLCNHU8Y7gO7h2CCzCadWmlKhOLYR4uu71QsOVsSPPvzZ0ZUFK0hjat0waJg6dxbg51GybS4R6eBcrFKbzKb7JWeW5W7FjKgepPI1IcQHBEDHK6wHAMOX6srIRQY03zlH1uZ04bQDgLXh-9y/s1600/R%C3%A1dio_98_FM_98.3_FM_Belo_Horizonte.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1KT2mxZa9EgRmHg49gYJWhtuonsy-Q4-N1jnapl_CvLCNHU8Y7gO7h2CCzCadWmlKhOLYR4uu71QsOVsSPPvzZ0ZUFK0hjat0waJg6dxbg51GybS4R6eBcrFKbzKb7JWeW5W7FjKgepPI1IcQHBEDHK6wHAMOX6srIRQY03zlH1uZ04bQDgLXh-9y/s1600/R%C3%A1dio_98_FM_98.3_FM_Belo_Horizonte.jpg'
+      }, 
+      
+      {
+        name: 'Rádio 98 Fm de Belo Curitiba',
+
+        sources: [
+          { src: 'https://up-continental.webnow.com.br/98fm.aac', type: 'audio/mpeg' },
+          { src: 'https://up-continental.webnow.com.br/98fm.aac', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD5WBjc59Ym8xKfpfkbx8xV_j2YzJrOyAV8v-gxewHO_kz-HEHmsL3hfxwTxac8EBGjKYsNGEqXHK-zMOf4eHIn5irkiH5xhqg7VgmKhV_ji3Laj-5RVmYwyamHFZLOh0k35e0CnabyempgS5IQWjU-qEXUYBNgI6uuUltJ4T6RrOHNA4QPv6ASIcU/s1600/98curitiba200.png',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD5WBjc59Ym8xKfpfkbx8xV_j2YzJrOyAV8v-gxewHO_kz-HEHmsL3hfxwTxac8EBGjKYsNGEqXHK-zMOf4eHIn5irkiH5xhqg7VgmKhV_ji3Laj-5RVmYwyamHFZLOh0k35e0CnabyempgS5IQWjU-qEXUYBNgI6uuUltJ4T6RrOHNA4QPv6ASIcU/s1600/98curitiba200.png'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD5WBjc59Ym8xKfpfkbx8xV_j2YzJrOyAV8v-gxewHO_kz-HEHmsL3hfxwTxac8EBGjKYsNGEqXHK-zMOf4eHIn5irkiH5xhqg7VgmKhV_ji3Laj-5RVmYwyamHFZLOh0k35e0CnabyempgS5IQWjU-qEXUYBNgI6uuUltJ4T6RrOHNA4QPv6ASIcU/s1600/98curitiba200.png'
+      },  
+
+      {
+        name: 'Rádio Fm Super de Vitória',
+
+        sources: [
+          { src: 'https://audio8.cmaudioevideo.com:10150/stream', type: 'audio/mpeg' },
+          { src: 'https://audio8.cmaudioevideo.com:10150/stream', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaO1nHAOhF74S7Q-Go8qS9j3DyQaU6dJdkSLOJ7VGFDORt-obuiePKRhSjP_fUvA7JTJRlChOiGlAxCdgd-Du-j6zN5g0xLdoASePg5Z1YSTjVwTFwFV5D3xATPUlqXA7ahaO6kv_ka2uJlxBpAdEeLnNT7dIcxbAdjPXIpVXjDAtkL4_UD0bcBNlN/s1600/superfm200.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaO1nHAOhF74S7Q-Go8qS9j3DyQaU6dJdkSLOJ7VGFDORt-obuiePKRhSjP_fUvA7JTJRlChOiGlAxCdgd-Du-j6zN5g0xLdoASePg5Z1YSTjVwTFwFV5D3xATPUlqXA7ahaO6kv_ka2uJlxBpAdEeLnNT7dIcxbAdjPXIpVXjDAtkL4_UD0bcBNlN/s1600/superfm200.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaO1nHAOhF74S7Q-Go8qS9j3DyQaU6dJdkSLOJ7VGFDORt-obuiePKRhSjP_fUvA7JTJRlChOiGlAxCdgd-Du-j6zN5g0xLdoASePg5Z1YSTjVwTFwFV5D3xATPUlqXA7ahaO6kv_ka2uJlxBpAdEeLnNT7dIcxbAdjPXIpVXjDAtkL4_UD0bcBNlN/s1600/superfm200.webp'
+      },    
+      
+      {
+        name: 'Rádio Paiquerê Fm de Londrina',
+
+        sources: [
+          { src: 'https://stm01.virtualcast.com.br:8294/live', type: 'audio/mpeg' },
+          { src: 'https://stm01.virtualcast.com.br:8294/live', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMZPp_uDiTRtRGa5D1euM5VOL9T-5yyYGWvV0cQNsMPUm7uMCYtHrRjUS1Ugwe5p3ltd3qWtMCbw6X6ncs6DR_D5gwdn2sGQlecYgPl-gNR-bo6P2QRs5s2QURNHwRb5aUy3g7dP5bE4pwfy5vo1eAh4mkot2nz2KmH--EVR_oJyOJuBFwsXMh3kUp/s1600/radio-paiquere-fm-98-9-de-londrina-parana200.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMZPp_uDiTRtRGa5D1euM5VOL9T-5yyYGWvV0cQNsMPUm7uMCYtHrRjUS1Ugwe5p3ltd3qWtMCbw6X6ncs6DR_D5gwdn2sGQlecYgPl-gNR-bo6P2QRs5s2QURNHwRb5aUy3g7dP5bE4pwfy5vo1eAh4mkot2nz2KmH--EVR_oJyOJuBFwsXMh3kUp/s1600/radio-paiquere-fm-98-9-de-londrina-parana200.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMZPp_uDiTRtRGa5D1euM5VOL9T-5yyYGWvV0cQNsMPUm7uMCYtHrRjUS1Ugwe5p3ltd3qWtMCbw6X6ncs6DR_D5gwdn2sGQlecYgPl-gNR-bo6P2QRs5s2QURNHwRb5aUy3g7dP5bE4pwfy5vo1eAh4mkot2nz2KmH--EVR_oJyOJuBFwsXMh3kUp/s1600/radio-paiquere-fm-98-9-de-londrina-parana200.jpg'
+      },  
+
+      {
+        name: 'Rádio Somzoom de sat',
+
+        sources: [
+          { src: 'https://paineldj5.com.br:20010/stream?type=.mp3', type: 'audio/mpeg' },
+          { src: 'https://paineldj5.com.br:20010/stream?type=.mp3', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_JDZpq6RHh94tleZTzYV7KHZ4bkeu6prJrwwc7hKlzAojOCyqsG5oNbtw1FA7dCriUBPJ_fmChmWLhAEJPGu2wJhRq82J-nNGEPqEnqSNj-6NEeacL9dr8srQNR904L52_y-ti1n4_AVc_tEeRlGRD57ezNV3p2j0I32LxqaKz2UTEWsRzC7sEoxM/s1600/somzomsat200.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_JDZpq6RHh94tleZTzYV7KHZ4bkeu6prJrwwc7hKlzAojOCyqsG5oNbtw1FA7dCriUBPJ_fmChmWLhAEJPGu2wJhRq82J-nNGEPqEnqSNj-6NEeacL9dr8srQNR904L52_y-ti1n4_AVc_tEeRlGRD57ezNV3p2j0I32LxqaKz2UTEWsRzC7sEoxM/s1600/somzomsat200.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_JDZpq6RHh94tleZTzYV7KHZ4bkeu6prJrwwc7hKlzAojOCyqsG5oNbtw1FA7dCriUBPJ_fmChmWLhAEJPGu2wJhRq82J-nNGEPqEnqSNj-6NEeacL9dr8srQNR904L52_y-ti1n4_AVc_tEeRlGRD57ezNV3p2j0I32LxqaKz2UTEWsRzC7sEoxM/s1600/somzomsat200.jpg'
+      }, 
+      
+      {
+        name: 'Rádio Metropolitana FM de São Paulo',
+
+        sources: [
+          { src: 'https://ice.fabricahost.com.br/metropolitana985sp', type: 'audio/mpeg' },
+          { src: 'https://ice.fabricahost.com.br/metropolitana985sp', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiC3MV4A1ckQC1JFX6VMnxl2s-xe3_Ij90Yp83m94kEIRGWR5y5VH8GRsFgJ3z361TmSo2ZKetSTHdYs7kqyyM00Ln1uLwIgrP34JJDeHXMStf-amafDqv_CSDCAlbXrAGkoZ7wvd-DOnmgwzpyj-eKyI4IamdK2I5Q6etK9e7EcymkHqdrmhuXM9nH/s1600/metrosp200.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiC3MV4A1ckQC1JFX6VMnxl2s-xe3_Ij90Yp83m94kEIRGWR5y5VH8GRsFgJ3z361TmSo2ZKetSTHdYs7kqyyM00Ln1uLwIgrP34JJDeHXMStf-amafDqv_CSDCAlbXrAGkoZ7wvd-DOnmgwzpyj-eKyI4IamdK2I5Q6etK9e7EcymkHqdrmhuXM9nH/s1600/metrosp200.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiC3MV4A1ckQC1JFX6VMnxl2s-xe3_Ij90Yp83m94kEIRGWR5y5VH8GRsFgJ3z361TmSo2ZKetSTHdYs7kqyyM00Ln1uLwIgrP34JJDeHXMStf-amafDqv_CSDCAlbXrAGkoZ7wvd-DOnmgwzpyj-eKyI4IamdK2I5Q6etK9e7EcymkHqdrmhuXM9nH/s1600/metrosp200.webp'
+      }, 
+
+      {
+        name: 'Rádio 99,5 FM de Goiânia',
+
+        sources: [
+          { src: 'https://ssl.zoeweb.net/proxy/serradourada?mp=/stream', type: 'audio/mpeg' },
+          { src: 'https://ssl.zoeweb.net/proxy/serradourada?mp=/stream', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3IfFeMV2IuKEpMNvM4k3dhhnJXa46KB3W3PsU8HeD0-mJX1rwgVVHEAYi6ZkB3gW2BJapjlpYJ0ydJkR4-38PzraMvtKQDDqd5s_TKZxf4rLqiSoYOCWDa2M-R6cYHpURYVChlhkweR3kiZ8mfRep5Uh0wX7_8JvK78Q_DvbzTzI3azPtqWAJS90Z/s1600/radio_995goiania200.png',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3IfFeMV2IuKEpMNvM4k3dhhnJXa46KB3W3PsU8HeD0-mJX1rwgVVHEAYi6ZkB3gW2BJapjlpYJ0ydJkR4-38PzraMvtKQDDqd5s_TKZxf4rLqiSoYOCWDa2M-R6cYHpURYVChlhkweR3kiZ8mfRep5Uh0wX7_8JvK78Q_DvbzTzI3azPtqWAJS90Z/s1600/radio_995goiania200.png'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3IfFeMV2IuKEpMNvM4k3dhhnJXa46KB3W3PsU8HeD0-mJX1rwgVVHEAYi6ZkB3gW2BJapjlpYJ0ydJkR4-38PzraMvtKQDDqd5s_TKZxf4rLqiSoYOCWDa2M-R6cYHpURYVChlhkweR3kiZ8mfRep5Uh0wX7_8JvK78Q_DvbzTzI3azPtqWAJS90Z/s1600/radio_995goiania200.png'
+      }, 
+      
+      {
+        name: 'Rádio Bahia FM de Salvador',
+
+        sources: [
+          { src: 'https://r13.ciclano.io:15087/stream', type: 'audio/mpeg' },
+          { src: 'https://r13.ciclano.io:15087/stream', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq0QyHTSHzu1bKFGFe2veyf0_Ec07Cnyl631qkW64wvu2YAODYTasTBwlv5w-iXYXnxcsYrh3TgKcjLHfeUIGnk_EA5azni0HPQDismg4AK1bHZRoLzA1lUkNYQjVrCEoTbB-3z4CXfE2QRchPLnspA3swVdxVbVj54T_os-qzCjTSD75TNUwbOsZQ/s1600/bahiafm200.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq0QyHTSHzu1bKFGFe2veyf0_Ec07Cnyl631qkW64wvu2YAODYTasTBwlv5w-iXYXnxcsYrh3TgKcjLHfeUIGnk_EA5azni0HPQDismg4AK1bHZRoLzA1lUkNYQjVrCEoTbB-3z4CXfE2QRchPLnspA3swVdxVbVj54T_os-qzCjTSD75TNUwbOsZQ/s1600/bahiafm200.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq0QyHTSHzu1bKFGFe2veyf0_Ec07Cnyl631qkW64wvu2YAODYTasTBwlv5w-iXYXnxcsYrh3TgKcjLHfeUIGnk_EA5azni0HPQDismg4AK1bHZRoLzA1lUkNYQjVrCEoTbB-3z4CXfE2QRchPLnspA3swVdxVbVj54T_os-qzCjTSD75TNUwbOsZQ/s1600/bahiafm200.webp'
+      },  
+      
+      {
+        name: 'Rádio 106 FM de Ribeirão Preto',
+
+        sources: [
+          { src: 'https://clube.cdn.upx.com:8067/stream', type: 'audio/mpeg' },
+          { src: 'https://clube.cdn.upx.com:8067/stream', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnrOWvA5MU5ZO_FKzMnWwoh1QnR-8_BgP7pkztxh_iL9kGz9Oto2B6-IFKTsgNvh_v8hapII8NmA_Ci3ssk1qmpAyiaHTj7bZDIA853P04f04kmuCDgJozRr0oqJlvo_U8ALsvVqFjmA_Qn3-wuAtQChG9KKrDjrdQO2OnLLMz2ENgeP7967Vt2TbZ/s1600/sertanejafmsv200.png',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnrOWvA5MU5ZO_FKzMnWwoh1QnR-8_BgP7pkztxh_iL9kGz9Oto2B6-IFKTsgNvh_v8hapII8NmA_Ci3ssk1qmpAyiaHTj7bZDIA853P04f04kmuCDgJozRr0oqJlvo_U8ALsvVqFjmA_Qn3-wuAtQChG9KKrDjrdQO2OnLLMz2ENgeP7967Vt2TbZ/s1600/sertanejafmsv200.png'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnrOWvA5MU5ZO_FKzMnWwoh1QnR-8_BgP7pkztxh_iL9kGz9Oto2B6-IFKTsgNvh_v8hapII8NmA_Ci3ssk1qmpAyiaHTj7bZDIA853P04f04kmuCDgJozRr0oqJlvo_U8ALsvVqFjmA_Qn3-wuAtQChG9KKrDjrdQO2OnLLMz2ENgeP7967Vt2TbZ/s1600/sertanejafmsv200.png'
+      },        
+
+      {
+        name: 'Rádio Transcontinental FM de São Paulo',
+
+        sources: [
+          { src: 'https://ice.fabricahost.com.br/transcontinentalsp48', type: 'audio/mpeg' },
+          { src: 'https://ice.fabricahost.com.br/transcontinentalsp48', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiERF1hKFQuO6ovkniA1IcP_64V_kAZnjhP1ipHUls0YN1skbbPmV8NVZEXZ4XR0qcJEvgIjL1P1kb4fm--li1WdMtrw5TwJDdIo-mnvgOyT_17526JQvsk8A-0-EQ1KryuZDO5UAIgkKJiTZ-jr66WJ_XyYj77hnKw1_jz5m_WTQ0Qp0yr4xwh9Xte/s200/transcontinentalsp200.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiERF1hKFQuO6ovkniA1IcP_64V_kAZnjhP1ipHUls0YN1skbbPmV8NVZEXZ4XR0qcJEvgIjL1P1kb4fm--li1WdMtrw5TwJDdIo-mnvgOyT_17526JQvsk8A-0-EQ1KryuZDO5UAIgkKJiTZ-jr66WJ_XyYj77hnKw1_jz5m_WTQ0Qp0yr4xwh9Xte/s200/transcontinentalsp200.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiERF1hKFQuO6ovkniA1IcP_64V_kAZnjhP1ipHUls0YN1skbbPmV8NVZEXZ4XR0qcJEvgIjL1P1kb4fm--li1WdMtrw5TwJDdIo-mnvgOyT_17526JQvsk8A-0-EQ1KryuZDO5UAIgkKJiTZ-jr66WJ_XyYj77hnKw1_jz5m_WTQ0Qp0yr4xwh9Xte/s200/transcontinentalsp200.jpg'
+      },  
+      
+      {
+        name: 'Rádio Saudade 99,7 FM de São Paulo',
+
+        sources: [
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/SAUDADE_FMAAC.aac?dist=radios.com.br', type: 'audio/mpeg' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/SAUDADE_FMAAC.aac?dist=radios.com.br', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggtkMXTZxiBhpAS4QIhcsqQu2M8lo0EE4VESOo6hVb-f8Xa5hA-URobZcWTM3W3Qk9atAIduxJJtAE3HKzu6_5elT1x-f28XK_iBuoKwuR7p_FNseuq3UDoq4Ku2EUW0V9HQWvgy-pKCoGtugMtKot9EifqyyPHrJ8ius_h85ISikIGYz_4H8ON_IC/s1600/saudadefm200.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggtkMXTZxiBhpAS4QIhcsqQu2M8lo0EE4VESOo6hVb-f8Xa5hA-URobZcWTM3W3Qk9atAIduxJJtAE3HKzu6_5elT1x-f28XK_iBuoKwuR7p_FNseuq3UDoq4Ku2EUW0V9HQWvgy-pKCoGtugMtKot9EifqyyPHrJ8ius_h85ISikIGYz_4H8ON_IC/s1600/saudadefm200.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggtkMXTZxiBhpAS4QIhcsqQu2M8lo0EE4VESOo6hVb-f8Xa5hA-URobZcWTM3W3Qk9atAIduxJJtAE3HKzu6_5elT1x-f28XK_iBuoKwuR7p_FNseuq3UDoq4Ku2EUW0V9HQWvgy-pKCoGtugMtKot9EifqyyPHrJ8ius_h85ISikIGYz_4H8ON_IC/s1600/saudadefm200.jpg'
+      },  
+      
+      {
+        name: 'Rádio Bandnews FM de São Paulo',
+
+        sources: [
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_SPAAC.aac?dist=radios.com.br', type: 'audio/mpeg' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_SPAAC.aac?dist=radios.com.br', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDgpaPypwJbs1H362EUeveIgDTTqkNCHTJ_9CUqMM1TNJuPtWwA_DCSBPtjxNZdrIUbAo1-nAHzxGuvU3ermuF-ng8MmTuQgSSR1KPPt2q_jypIkabnitUGkXzBLTgAvjRQmwoDdQttgtH6juI1iG_K7p-2WbwmvIRHJS94EiILi7fLAplcO-c-2ab/s1600/bandnewsfm2.png',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDgpaPypwJbs1H362EUeveIgDTTqkNCHTJ_9CUqMM1TNJuPtWwA_DCSBPtjxNZdrIUbAo1-nAHzxGuvU3ermuF-ng8MmTuQgSSR1KPPt2q_jypIkabnitUGkXzBLTgAvjRQmwoDdQttgtH6juI1iG_K7p-2WbwmvIRHJS94EiILi7fLAplcO-c-2ab/s1600/bandnewsfm2.png'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDgpaPypwJbs1H362EUeveIgDTTqkNCHTJ_9CUqMM1TNJuPtWwA_DCSBPtjxNZdrIUbAo1-nAHzxGuvU3ermuF-ng8MmTuQgSSR1KPPt2q_jypIkabnitUGkXzBLTgAvjRQmwoDdQttgtH6juI1iG_K7p-2WbwmvIRHJS94EiILi7fLAplcO-c-2ab/s1600/bandnewsfm2.png'
+      },  
+      
+      {
+        name: 'Rádio Liberdade FM de Belo Horizonte',
+
+        sources: [
+          { src: 'https://8335.brasilstream.com.br/stream', type: 'audio/mpeg' },
+          { src: 'https://8335.brasilstream.com.br/stream', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghGKt5zUJ1R-LfYL4niUNN3BjdetHW2qie7KSDMUbRLCXI0q6F9gqxPRuJOTvwPwdTKZYv6Y_zF3-9m2C6VDQFYr5-7Cwmu2kBQhxc7uR25baFKT-g3gD6kTYuNvTbfpb4_KK4ckpAPL7MdoNLl5Os7mc1hVfZlqSPb0u094GTkJXBudnoqsuM6Y-v/s1600/liberdadefm.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghGKt5zUJ1R-LfYL4niUNN3BjdetHW2qie7KSDMUbRLCXI0q6F9gqxPRuJOTvwPwdTKZYv6Y_zF3-9m2C6VDQFYr5-7Cwmu2kBQhxc7uR25baFKT-g3gD6kTYuNvTbfpb4_KK4ckpAPL7MdoNLl5Os7mc1hVfZlqSPb0u094GTkJXBudnoqsuM6Y-v/s1600/liberdadefm.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghGKt5zUJ1R-LfYL4niUNN3BjdetHW2qie7KSDMUbRLCXI0q6F9gqxPRuJOTvwPwdTKZYv6Y_zF3-9m2C6VDQFYr5-7Cwmu2kBQhxc7uR25baFKT-g3gD6kTYuNvTbfpb4_KK4ckpAPL7MdoNLl5Os7mc1hVfZlqSPb0u094GTkJXBudnoqsuM6Y-v/s1600/liberdadefm.webp'
+      }, 
+      
+      {
+        name: 'Rádio Jangadeiro FM de Fortaleza',
+
+        sources: [
+          { src: 'https://fmfortaleza.jmvstream.com/FMFortaleza', type: 'audio/mpeg' },
+          { src: 'https://fmfortaleza.jmvstream.com/FMFortaleza', type: 'audio/ogg' },
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizAi59pa3TfPC2Hcfny-394L6a4WXxoub42ABvzQP2aGaTkgU22UwYOQRLFRQg0HYmv6cXaqvECRPwKFVS1831vtrJqSc_zKrTR8-pf-E91jNtbjQiCv1FN5u9Q8l07Z5E5KDO4t1453sENRBbSX8-YZ7PZxhaIia7jkrBXpRssjst2zEBDEYaMFhW/s1600/radio-jangadeiro-fm-fortaleza-ce200.png',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizAi59pa3TfPC2Hcfny-394L6a4WXxoub42ABvzQP2aGaTkgU22UwYOQRLFRQg0HYmv6cXaqvECRPwKFVS1831vtrJqSc_zKrTR8-pf-E91jNtbjQiCv1FN5u9Q8l07Z5E5KDO4t1453sENRBbSX8-YZ7PZxhaIia7jkrBXpRssjst2zEBDEYaMFhW/s1600/radio-jangadeiro-fm-fortaleza-ce200.png'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizAi59pa3TfPC2Hcfny-394L6a4WXxoub42ABvzQP2aGaTkgU22UwYOQRLFRQg0HYmv6cXaqvECRPwKFVS1831vtrJqSc_zKrTR8-pf-E91jNtbjQiCv1FN5u9Q8l07Z5E5KDO4t1453sENRBbSX8-YZ7PZxhaIia7jkrBXpRssjst2zEBDEYaMFhW/s1600/radio-jangadeiro-fm-fortaleza-ce200.png'
+      },  
+      
+
+      
+      {
+        name: 'Rádio Tupi 96,5 FM de RJ',
+
+        sources: [
+          { src: 'https://8923.brasilstream.com.br/stream', type: 'audio/mpeg' },
+          { src: 'https://8923.brasilstream.com.br/stream', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEvIJcmJmtSiAGV1KdtNmHdxHR0SVKmFckcNmaExGHVBRxcTVVips9phzURhJdfZfFNnztBIHDrON5EB0dU0wyAsuGJRor-iTKpgEmVBnYnB6ZW34gSlld3xnkzG_3uWUIttlG7KFqzO33yi5NZjrN79QLs2WOVG5NrjyGxbwlKq5U8jh8ArvlcP_P/s1600/tupifm200.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEvIJcmJmtSiAGV1KdtNmHdxHR0SVKmFckcNmaExGHVBRxcTVVips9phzURhJdfZfFNnztBIHDrON5EB0dU0wyAsuGJRor-iTKpgEmVBnYnB6ZW34gSlld3xnkzG_3uWUIttlG7KFqzO33yi5NZjrN79QLs2WOVG5NrjyGxbwlKq5U8jh8ArvlcP_P/s1600/tupifm200.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEvIJcmJmtSiAGV1KdtNmHdxHR0SVKmFckcNmaExGHVBRxcTVVips9phzURhJdfZfFNnztBIHDrON5EB0dU0wyAsuGJRor-iTKpgEmVBnYnB6ZW34gSlld3xnkzG_3uWUIttlG7KFqzO33yi5NZjrN79QLs2WOVG5NrjyGxbwlKq5U8jh8ArvlcP_P/s1600/tupifm200.jpg'
+      }, 
+
+      {
+        name: 'Rádio Disney 91,3 FM de SP',
+
+        sources: [
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_BRA_SP.mp3', type: 'audio/mpeg' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_BRA_SP.mp3', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5FX6-vE_uPTH0yM4c8rpbtXGlgr9qR5X86lPpAcNFOHn3pqY9XAEem__LYM219_l7jQ0Z9XvE4b_iF2dO_53ys0CiKD8fiBzxAC-QPy7CCPPKGWUzse5rTxPCwSE_OZE1GkKbRcpVUKO0I1Nk5FX-o7ckaBsGPJufQPyGsEMP0puTuFzp6VUd_Tql/s1600/disneyfm.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5FX6-vE_uPTH0yM4c8rpbtXGlgr9qR5X86lPpAcNFOHn3pqY9XAEem__LYM219_l7jQ0Z9XvE4b_iF2dO_53ys0CiKD8fiBzxAC-QPy7CCPPKGWUzse5rTxPCwSE_OZE1GkKbRcpVUKO0I1Nk5FX-o7ckaBsGPJufQPyGsEMP0puTuFzp6VUd_Tql/s1600/disneyfm.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5FX6-vE_uPTH0yM4c8rpbtXGlgr9qR5X86lPpAcNFOHn3pqY9XAEem__LYM219_l7jQ0Z9XvE4b_iF2dO_53ys0CiKD8fiBzxAC-QPy7CCPPKGWUzse5rTxPCwSE_OZE1GkKbRcpVUKO0I1Nk5FX-o7ckaBsGPJufQPyGsEMP0puTuFzp6VUd_Tql/s1600/disneyfm.webp'
+      },
+      
+      {
+        name: 'Rádio Nova Brasil 89.7 FM de SP',
+
+        sources: [
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/NOVABRASIL_SPAAC.aac', type: 'audio/mpeg' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/NOVABRASIL_SPAAC.aac', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF35WC8wt10hsDdvGGrd_43biIQvkqQrN4nlqrutQqn0oc0SKSyxYNYUN6Xtwtb1ZJd9TRPH4vS4cjKuLpaKYpI1fFQJ1HEseWB3Lf1YUUkDwFqHydjr36UbJtpa-DvwvO1ZzdPPKjZJOvs9FsaE_Ph7z6UCjeSYHdhlAgxpkXpgs4tdz7sLys7ipg/s1600/novabrasil.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF35WC8wt10hsDdvGGrd_43biIQvkqQrN4nlqrutQqn0oc0SKSyxYNYUN6Xtwtb1ZJd9TRPH4vS4cjKuLpaKYpI1fFQJ1HEseWB3Lf1YUUkDwFqHydjr36UbJtpa-DvwvO1ZzdPPKjZJOvs9FsaE_Ph7z6UCjeSYHdhlAgxpkXpgs4tdz7sLys7ipg/s1600/novabrasil.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiF35WC8wt10hsDdvGGrd_43biIQvkqQrN4nlqrutQqn0oc0SKSyxYNYUN6Xtwtb1ZJd9TRPH4vS4cjKuLpaKYpI1fFQJ1HEseWB3Lf1YUUkDwFqHydjr36UbJtpa-DvwvO1ZzdPPKjZJOvs9FsaE_Ph7z6UCjeSYHdhlAgxpkXpgs4tdz7sLys7ipg/s1600/novabrasil.webp'
+      },  
+      
+      {
+        name: 'Rádio 105 FM de SP',
+
+        sources: [
+        { src: 'https://appradio.app:8010/stream', type: 'video/mp4' },
+          { src: 'https://appradio.app:8010/stream', type: 'audio/mpeg' },
+          { src: 'https://appradio.app:8010/stream', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyFcI7_p9HW1yteBNHq-r4vGJpX2pLe4USrZeu-Cfb9bgOvDLTj7k0QBEjtT3CCfDoGanL84k1P_NE0wBid-BU618OuJpctC9pkDxPGV6egXhG69qfDxrF_zWHQP0H-V3tX5ROGbE6QEGkem0B-SKL-XKG4ZzCybgDES78iaNGAdCxxqoFyGCM37B6/s1600/radio_105fmjundiai.png',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyFcI7_p9HW1yteBNHq-r4vGJpX2pLe4USrZeu-Cfb9bgOvDLTj7k0QBEjtT3CCfDoGanL84k1P_NE0wBid-BU618OuJpctC9pkDxPGV6egXhG69qfDxrF_zWHQP0H-V3tX5ROGbE6QEGkem0B-SKL-XKG4ZzCybgDES78iaNGAdCxxqoFyGCM37B6/s1600/radio_105fmjundiai.png'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyFcI7_p9HW1yteBNHq-r4vGJpX2pLe4USrZeu-Cfb9bgOvDLTj7k0QBEjtT3CCfDoGanL84k1P_NE0wBid-BU618OuJpctC9pkDxPGV6egXhG69qfDxrF_zWHQP0H-V3tX5ROGbE6QEGkem0B-SKL-XKG4ZzCybgDES78iaNGAdCxxqoFyGCM37B6/s1600/radio_105fmjundiai.png'
+      },    
+      
+      {
+        name: 'Rádio Rock 89 FM de SP',
+
+        sources: [
+        { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_89FM_ADP.aac', type: 'video/mp4' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_89FM_ADP.aac', type: 'audio/mpeg' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_89FM_ADP.aac', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeH_0VpQhH905N6q9g6TPrrP1V0xN9a0jk64X2eZpLWz-jQipw9UMHMlIvcGDuZPTgHavuyV6aXyIucgzQq4kmzHEyl7OgGdFBkv6TCbu7XWxAsCtEFKl9MdIjfTBW-6f7M0RaKSNmDp3cTC91jyNx8bxd3pX9QmaM0v64L-arMLpaLVxyfKSWmQMv/s1600/89rock200.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeH_0VpQhH905N6q9g6TPrrP1V0xN9a0jk64X2eZpLWz-jQipw9UMHMlIvcGDuZPTgHavuyV6aXyIucgzQq4kmzHEyl7OgGdFBkv6TCbu7XWxAsCtEFKl9MdIjfTBW-6f7M0RaKSNmDp3cTC91jyNx8bxd3pX9QmaM0v64L-arMLpaLVxyfKSWmQMv/s1600/89rock200.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeH_0VpQhH905N6q9g6TPrrP1V0xN9a0jk64X2eZpLWz-jQipw9UMHMlIvcGDuZPTgHavuyV6aXyIucgzQq4kmzHEyl7OgGdFBkv6TCbu7XWxAsCtEFKl9MdIjfTBW-6f7M0RaKSNmDp3cTC91jyNx8bxd3pX9QmaM0v64L-arMLpaLVxyfKSWmQMv/s1600/89rock200.jpg'
+      }, 
+
+      {
+        name: 'Rádio Viola 98.1 FM de PR',
+
+        sources: [
+        { src: 'https://ice.fabricahost.com.br/violafm', type: 'video/mp4' },
+          { src: 'https://ice.fabricahost.com.br/violafm', type: 'audio/mpeg' },
+          { src: 'https://ice.fabricahost.com.br/violafm', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1dfAl8fkBbrPFop2ICrG3GgeoxUQLioT96ZO_KWCwY5LmtHGDZ161P9p4vDCJVTglfeIaez1BEb3XNIpUPkUSpzlTob6-fTDEDNKmrEIVvcuA1MDoAsJhkH4BQVTR1ksdaAYf0ZlTEsf5GTMbrecJoqyWd6Q0pSErsZaJ4DR3n9jEMjWRF4vl7K9B/s1600/violafm200.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1dfAl8fkBbrPFop2ICrG3GgeoxUQLioT96ZO_KWCwY5LmtHGDZ161P9p4vDCJVTglfeIaez1BEb3XNIpUPkUSpzlTob6-fTDEDNKmrEIVvcuA1MDoAsJhkH4BQVTR1ksdaAYf0ZlTEsf5GTMbrecJoqyWd6Q0pSErsZaJ4DR3n9jEMjWRF4vl7K9B/s1600/violafm200.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1dfAl8fkBbrPFop2ICrG3GgeoxUQLioT96ZO_KWCwY5LmtHGDZ161P9p4vDCJVTglfeIaez1BEb3XNIpUPkUSpzlTob6-fTDEDNKmrEIVvcuA1MDoAsJhkH4BQVTR1ksdaAYf0ZlTEsf5GTMbrecJoqyWd6Q0pSErsZaJ4DR3n9jEMjWRF4vl7K9B/s1600/violafm200.jpg'
+      },     
+      
+      {
+        name: 'Rádio Energia 97.7 FM de SP',
+
+        sources: [
+        { src: 'https://streaming.inweb.com.br/energia', type: 'video/mp4' },
+          { src: 'https://streaming.inweb.com.br/energia', type: 'audio/mpeg' },
+          { src: 'https://streaming.inweb.com.br/energia', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHODqCebBCHVQVyB0ycPRzsCzSlHCRc_em66hwMb_Hufe9hff1CuDNhwRwqVAOlNPoZaFYQCRA8OgiwJgUax6eq2NYYFu6mHPbmsl-i6xx7H9GVDv7XjR0w5EIT0xECtLiWaF1M6gFX5ttSl-8I5r0DsnthaQWKubWCtEAy8aYTv7TnOjhWIC5_a5X/s1600/energiafm.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHODqCebBCHVQVyB0ycPRzsCzSlHCRc_em66hwMb_Hufe9hff1CuDNhwRwqVAOlNPoZaFYQCRA8OgiwJgUax6eq2NYYFu6mHPbmsl-i6xx7H9GVDv7XjR0w5EIT0xECtLiWaF1M6gFX5ttSl-8I5r0DsnthaQWKubWCtEAy8aYTv7TnOjhWIC5_a5X/s1600/energiafm.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHODqCebBCHVQVyB0ycPRzsCzSlHCRc_em66hwMb_Hufe9hff1CuDNhwRwqVAOlNPoZaFYQCRA8OgiwJgUax6eq2NYYFu6mHPbmsl-i6xx7H9GVDv7XjR0w5EIT0xECtLiWaF1M6gFX5ttSl-8I5r0DsnthaQWKubWCtEAy8aYTv7TnOjhWIC5_a5X/s1600/energiafm.jpg'
+      },  
+       
+      
+      {
+        name: 'Rádio Sousa 104.3 FM de PB',
+
+        sources: [
+        { src: 'https://player-ssl.kshost.com.br:12844/live', type: 'video/mp4' },
+          { src: 'https://player-ssl.kshost.com.br:12844/live', type: 'audio/mpeg' },
+          { src: 'https://player-ssl.kshost.com.br:12844/live', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6I05X0EKmfXZczFTB7HLWonpxX510JStZCBUR7_Xw8bIjWAuULM2a6qk8cVhUIZtljihZwWrfZELg0DTWfJi6_ji3UeUy93DWO5xKuAMJVx2GVnoyfTwu_7dftHIYYiLspnDQ7iH4fzofExXT9UzUgzKRkzlL26UwU5NUYeJWXN0mkWYiw0dFMpLk/s1600/sousafm.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6I05X0EKmfXZczFTB7HLWonpxX510JStZCBUR7_Xw8bIjWAuULM2a6qk8cVhUIZtljihZwWrfZELg0DTWfJi6_ji3UeUy93DWO5xKuAMJVx2GVnoyfTwu_7dftHIYYiLspnDQ7iH4fzofExXT9UzUgzKRkzlL26UwU5NUYeJWXN0mkWYiw0dFMpLk/s1600/sousafm.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6I05X0EKmfXZczFTB7HLWonpxX510JStZCBUR7_Xw8bIjWAuULM2a6qk8cVhUIZtljihZwWrfZELg0DTWfJi6_ji3UeUy93DWO5xKuAMJVx2GVnoyfTwu_7dftHIYYiLspnDQ7iH4fzofExXT9UzUgzKRkzlL26UwU5NUYeJWXN0mkWYiw0dFMpLk/s1600/sousafm.webp'
+      },     
+      
+      {
+        name: 'Rádio Gazeta 88.1 FM de SP',
+
+        sources: [
+        { src: 'https://shout25.crossradio.com.br:18002/stream', type: 'video/mp4' },
+          { src: 'https://shout25.crossradio.com.br:18002/stream', type: 'audio/mpeg' },
+          { src: 'https://shout25.crossradio.com.br:18002/stream', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil5t93WMcXWI4NcWEGFuVsoq-tU7HhJ8-SIjWeRqhPU-5xQn9-5yidXuW6Q_YaZ3XyJwlshebyeiI5_tVvt5Ppc_xdmWfQVyXwYaE2X5pybvKcDQBGoIplAh6GimuFJtIJzmjYCb23UVXN_kxip1znXZq4G3f83SrGgGSiXkXEeiI7UdOiK-0DheVK/s1600/gazetafm.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil5t93WMcXWI4NcWEGFuVsoq-tU7HhJ8-SIjWeRqhPU-5xQn9-5yidXuW6Q_YaZ3XyJwlshebyeiI5_tVvt5Ppc_xdmWfQVyXwYaE2X5pybvKcDQBGoIplAh6GimuFJtIJzmjYCb23UVXN_kxip1znXZq4G3f83SrGgGSiXkXEeiI7UdOiK-0DheVK/s1600/gazetafm.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil5t93WMcXWI4NcWEGFuVsoq-tU7HhJ8-SIjWeRqhPU-5xQn9-5yidXuW6Q_YaZ3XyJwlshebyeiI5_tVvt5Ppc_xdmWfQVyXwYaE2X5pybvKcDQBGoIplAh6GimuFJtIJzmjYCb23UVXN_kxip1znXZq4G3f83SrGgGSiXkXEeiI7UdOiK-0DheVK/s1600/gazetafm.webp'
+      },   
+      
+      {
+        name: 'Rádio Vale 99.9 FM de CE',
+
+        sources: [
+        { src: 'https://webradio.amsolution.com.br/radio/8340/vale99', type: 'video/mp4' },
+          { src: 'https://webradio.amsolution.com.br/radio/8340/vale99', type: 'audio/mpeg' },
+          { src: 'https://webradio.amsolution.com.br/radio/8340/vale99', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcEHDyNAPoZoZfNwa0RC9Eph5X33ugx86jun7UlhR1O-7-3IndsawTARIb4mDBYKXmiFrGk1Rs_NkeKQzS0kTKCwCxmwsBanSHKBpJD9PAI9jD3eKvPZnvwLQPb7wcFUvW2pJGb5s77_r7iFzhQjxp7lgpQAW34-Sjk-OZ14_TmsVqEpek019TvO7b/s1600/valefm.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcEHDyNAPoZoZfNwa0RC9Eph5X33ugx86jun7UlhR1O-7-3IndsawTARIb4mDBYKXmiFrGk1Rs_NkeKQzS0kTKCwCxmwsBanSHKBpJD9PAI9jD3eKvPZnvwLQPb7wcFUvW2pJGb5s77_r7iFzhQjxp7lgpQAW34-Sjk-OZ14_TmsVqEpek019TvO7b/s1600/valefm.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcEHDyNAPoZoZfNwa0RC9Eph5X33ugx86jun7UlhR1O-7-3IndsawTARIb4mDBYKXmiFrGk1Rs_NkeKQzS0kTKCwCxmwsBanSHKBpJD9PAI9jD3eKvPZnvwLQPb7wcFUvW2pJGb5s77_r7iFzhQjxp7lgpQAW34-Sjk-OZ14_TmsVqEpek019TvO7b/s1600/valefm.webp'
+      },   
+      
+      {
+        name: 'Rádio Hits 99.7 FM de RJ',
+
+        sources: [
+        { src: 'https://paineldj.com.br:20028/stream', type: 'video/mp4' },
+          { src: 'https://paineldj.com.br:20028/stream', type: 'audio/mpeg' },
+          { src: 'https://paineldj.com.br:20028/stream', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghoLnnxjGl9cRukTzzrfUWkOlfsxRr49XdOrtzYttxp5aMBh0gXj40B62Sxjco3fKVVSkDsrGFHFyv8PUNWdY6gHfXYCS6xIt711fZ06AIm9n7dhbf7jmUod6R6d2Pogoe5NuEhTfMdKkWDza6FN_OC9WZIVhbWkik7aIyWvAoyV28Zv4Rwruy_DLA/s1600/hits99.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghoLnnxjGl9cRukTzzrfUWkOlfsxRr49XdOrtzYttxp5aMBh0gXj40B62Sxjco3fKVVSkDsrGFHFyv8PUNWdY6gHfXYCS6xIt711fZ06AIm9n7dhbf7jmUod6R6d2Pogoe5NuEhTfMdKkWDza6FN_OC9WZIVhbWkik7aIyWvAoyV28Zv4Rwruy_DLA/s1600/hits99.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghoLnnxjGl9cRukTzzrfUWkOlfsxRr49XdOrtzYttxp5aMBh0gXj40B62Sxjco3fKVVSkDsrGFHFyv8PUNWdY6gHfXYCS6xIt711fZ06AIm9n7dhbf7jmUod6R6d2Pogoe5NuEhTfMdKkWDza6FN_OC9WZIVhbWkik7aIyWvAoyV28Zv4Rwruy_DLA/s1600/hits99.webp'
+      }, 
+      
+      {
+        name: 'Rádio Arapuan 95.3 FM de PB',
+
+        sources: [
+        { src: 'https://streaming.engelhosting.com.br:10026/stream', type: 'video/mp4' },
+          { src: 'https://streaming.engelhosting.com.br:10026/stream', type: 'audio/mpeg' },
+          { src: 'https://streaming.engelhosting.com.br:10026/stream', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixEWLrA5bS1zH5aT0l6KpfnMPlqVo4nu2l9CjFJrTAP-5yOo-xUZPjDKr2U3EUg1aRxTdMU8XHqC4Uw_Mwtu0XLCyOhnainwPiivLqwxD2glAMYUtfPjnChGZIzo0IWBgKYAEO3jBwLz_yN6WClJWn4wzySeF8BU-3jsMT3-kksZXWEfNiSbHS7Ulc/s1600/arapuan.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixEWLrA5bS1zH5aT0l6KpfnMPlqVo4nu2l9CjFJrTAP-5yOo-xUZPjDKr2U3EUg1aRxTdMU8XHqC4Uw_Mwtu0XLCyOhnainwPiivLqwxD2glAMYUtfPjnChGZIzo0IWBgKYAEO3jBwLz_yN6WClJWn4wzySeF8BU-3jsMT3-kksZXWEfNiSbHS7Ulc/s1600/arapuan.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixEWLrA5bS1zH5aT0l6KpfnMPlqVo4nu2l9CjFJrTAP-5yOo-xUZPjDKr2U3EUg1aRxTdMU8XHqC4Uw_Mwtu0XLCyOhnainwPiivLqwxD2glAMYUtfPjnChGZIzo0IWBgKYAEO3jBwLz_yN6WClJWn4wzySeF8BU-3jsMT3-kksZXWEfNiSbHS7Ulc/s1600/arapuan.webp'
+      },    
+      
+      {
+        name: 'Rádio Super 91.7 FM de MG',
+
+        sources: [
+        { src: 'https://9134.brasilstream.com.br/mp3', type: 'video/mp4' },
+          { src: 'https://9134.brasilstream.com.br/mp3', type: 'audio/mpeg' },
+          { src: 'https://9134.brasilstream.com.br/mp3', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPISo8s-4twLXr1A699YWVAbrqsmDGzK_mRYJUmb_OIDFN2ubXFt40DY-1b2XXgFtjHpFbKPTUXQTuvAyM5v8awvy626hk5mRfZpHAv0c0jooAdjgyUx2YeJenjntSFyxjwl5F95E7ne8EgTK84nDpVKvE6ZnQH7w2TNfiTPASUg0fwYKLUZiXi9ft/s1600/radiosuper.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPISo8s-4twLXr1A699YWVAbrqsmDGzK_mRYJUmb_OIDFN2ubXFt40DY-1b2XXgFtjHpFbKPTUXQTuvAyM5v8awvy626hk5mRfZpHAv0c0jooAdjgyUx2YeJenjntSFyxjwl5F95E7ne8EgTK84nDpVKvE6ZnQH7w2TNfiTPASUg0fwYKLUZiXi9ft/s1600/radiosuper.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPISo8s-4twLXr1A699YWVAbrqsmDGzK_mRYJUmb_OIDFN2ubXFt40DY-1b2XXgFtjHpFbKPTUXQTuvAyM5v8awvy626hk5mRfZpHAv0c0jooAdjgyUx2YeJenjntSFyxjwl5F95E7ne8EgTK84nDpVKvE6ZnQH7w2TNfiTPASUg0fwYKLUZiXi9ft/s1600/radiosuper.webp'
+      },        
+
+      {
+        name: 'Rádio 102.3 FM de RS',
+
+        sources: [
+        { src: 'https://1192747t.ha.azioncdn.net/primary/ita_poa.sdp/playlist.m3u8', type: 'application/x-mpegurl' },
+        { src: 'https://1192747t.ha.azioncdn.net/primary/ita_poa.sdp/playlist.m3u8', type: 'video/mp4' },
+          { src: 'https://1192747t.ha.azioncdn.net/primary/ita_poa.sdp/playlist.m3u8', type: 'audio/mpeg' },
+          { src: 'https://1192747t.ha.azioncdn.net/primary/ita_poa.sdp/playlist.m3u8', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWvsmKxRmM5cmRicv0MohP05HwkM7ntbUHGfmzX1D3wddHzctfW8AwVfYnMn_nLnBn3eosUCS-ZK2MZoe7dEYbEhmU-mm2vVL1I0SNkLXbMaMByf_qWYNzPX8yqmycDzF1s_zsADFo__shehb0diudJnPnbABfB4v9FUU5NjwxpVDye0Nw1VexQwsX/s1600/203.,3.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWvsmKxRmM5cmRicv0MohP05HwkM7ntbUHGfmzX1D3wddHzctfW8AwVfYnMn_nLnBn3eosUCS-ZK2MZoe7dEYbEhmU-mm2vVL1I0SNkLXbMaMByf_qWYNzPX8yqmycDzF1s_zsADFo__shehb0diudJnPnbABfB4v9FUU5NjwxpVDye0Nw1VexQwsX/s1600/203.,3.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWvsmKxRmM5cmRicv0MohP05HwkM7ntbUHGfmzX1D3wddHzctfW8AwVfYnMn_nLnBn3eosUCS-ZK2MZoe7dEYbEhmU-mm2vVL1I0SNkLXbMaMByf_qWYNzPX8yqmycDzF1s_zsADFo__shehb0diudJnPnbABfB4v9FUU5NjwxpVDye0Nw1VexQwsX/s1600/203.,3.webp'
+      },
+      
+      {
+        name: 'Rádio 102.3 FM de RS',
+
+        sources: [
+        { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/PLAY_SPAAC.m3u8?dist=radios.com.br', type: 'application/x-mpegurl' },
+        { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/PLAY_SPAAC.m3u8?dist=radios.com.br', type: 'video/mp4' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/PLAY_SPAAC.m3u8?dist=radios.com.br', type: 'audio/mpeg' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/PLAY_SPAAC.m3u8?dist=radios.com.br', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYaT7wTCnynUWHRQovvPPlds7sFS-Rym2X_ayKkjBgKJY9hNsso7xbIXzMTIhc7E0GAalMqwIaZt6wQu7NE5aXZLZDnusWTwgC2bI0JwvwwMPDzmZTUt_E0o5NfOG8qMH_SmcAvTi-CHeihkxl_AgSJ9rC05OFaRZkQkvTLU7T4lqBlImolV8ejQq7/s1600/playfm.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYaT7wTCnynUWHRQovvPPlds7sFS-Rym2X_ayKkjBgKJY9hNsso7xbIXzMTIhc7E0GAalMqwIaZt6wQu7NE5aXZLZDnusWTwgC2bI0JwvwwMPDzmZTUt_E0o5NfOG8qMH_SmcAvTi-CHeihkxl_AgSJ9rC05OFaRZkQkvTLU7T4lqBlImolV8ejQq7/s1600/playfm.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYaT7wTCnynUWHRQovvPPlds7sFS-Rym2X_ayKkjBgKJY9hNsso7xbIXzMTIhc7E0GAalMqwIaZt6wQu7NE5aXZLZDnusWTwgC2bI0JwvwwMPDzmZTUt_E0o5NfOG8qMH_SmcAvTi-CHeihkxl_AgSJ9rC05OFaRZkQkvTLU7T4lqBlImolV8ejQq7/s1600/playfm.webp'
+      },  
+      
+      {
+        name: 'Rádio Imprensa 102.5 FM de SP',
+
+        sources: [
+        { src: 'https://cloud1.cdnseguro.com:20024/stream', type: 'audio/mpeg' },
+        { src: 'https://cloud1.cdnseguro.com:20024/stream', type: 'application/x-mpegurl' },
+        { src: 'https://cloud1.cdnseguro.com:20024/stream', type: 'video/mp4' },
+          { src: 'https://cloud1.cdnseguro.com:20024/stream', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAXDCCCYhT2HzBUnwGw64H-4CDaDzW46_xLVSaAwx8Cx3wSlGUF7BxxtC8dKOyCMrhZZvL8ZTSeka6w4gdY2sedagtumWPPJbsxYFKfv-C6KON8GGScRMg17aV7IQKBwsfuDFVBXBUXpaQ2xCLsczAXX1kjKVzP9xwE_7WqaSDRcpbUHARllydjW-4/s1600/radioimrensa.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAXDCCCYhT2HzBUnwGw64H-4CDaDzW46_xLVSaAwx8Cx3wSlGUF7BxxtC8dKOyCMrhZZvL8ZTSeka6w4gdY2sedagtumWPPJbsxYFKfv-C6KON8GGScRMg17aV7IQKBwsfuDFVBXBUXpaQ2xCLsczAXX1kjKVzP9xwE_7WqaSDRcpbUHARllydjW-4/s1600/radioimrensa.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAXDCCCYhT2HzBUnwGw64H-4CDaDzW46_xLVSaAwx8Cx3wSlGUF7BxxtC8dKOyCMrhZZvL8ZTSeka6w4gdY2sedagtumWPPJbsxYFKfv-C6KON8GGScRMg17aV7IQKBwsfuDFVBXBUXpaQ2xCLsczAXX1kjKVzP9xwE_7WqaSDRcpbUHARllydjW-4/s1600/radioimrensa.webp'
+      },
+      
+      {
+        name: 'Rádio Vale 88.9 FM de PI',
+
+        sources: [
+        { src: 'https://webradio.amsolution.com.br/radio/8260/vale', type: 'audio/mpeg' },
+        { src: 'https://webradio.amsolution.com.br/radio/8260/vale', type: 'application/x-mpegurl' },
+        { src: 'https://webradio.amsolution.com.br/radio/8260/vale', type: 'video/mp4' },
+          { src: 'https://webradio.amsolution.com.br/radio/8260/vale', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUcmNqbrYtf2oe5lDqCRN_xlIAp57PBNN0cqxcxFv4e-tefNyHr9lXNUNecl5Cl3yH-mGnFbd6xqr31pqLLsBOhgdUK5FAu2g0a0rYVISOOAx3umcQeoHxH4m3x1rYsc7eYaL4wTJJbKFA8wLzdIitGqBuBBuNpXs42panC9K-gEHGSQ6Lo8ARH_n_/s1600/valefm2.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUcmNqbrYtf2oe5lDqCRN_xlIAp57PBNN0cqxcxFv4e-tefNyHr9lXNUNecl5Cl3yH-mGnFbd6xqr31pqLLsBOhgdUK5FAu2g0a0rYVISOOAx3umcQeoHxH4m3x1rYsc7eYaL4wTJJbKFA8wLzdIitGqBuBBuNpXs42panC9K-gEHGSQ6Lo8ARH_n_/s1600/valefm2.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUcmNqbrYtf2oe5lDqCRN_xlIAp57PBNN0cqxcxFv4e-tefNyHr9lXNUNecl5Cl3yH-mGnFbd6xqr31pqLLsBOhgdUK5FAu2g0a0rYVISOOAx3umcQeoHxH4m3x1rYsc7eYaL4wTJJbKFA8wLzdIitGqBuBBuNpXs42panC9K-gEHGSQ6Lo8ARH_n_/s1600/valefm2.webp'
+      }, 
+
+      {
+        name: 'Rádio Sulamérica Paradiso 95.7 FM de RJ',
+
+        sources: [
+        { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/SULAMERICAAAC.aac?dist=radioscombr', type: 'audio/mpeg' },
+        { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/SULAMERICAAAC.aac?dist=radioscombr', type: 'application/x-mpegurl' },
+        { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/SULAMERICAAAC.aac?dist=radioscombr', type: 'video/mp4' },
+          { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/SULAMERICAAAC.aac?dist=radioscombr', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifGLQzppP4MueTeJPSgcIFHYAAAFQblkGhOpik8CUvVPzQ11jh-jATdVqij2uf378dM-erO9ii5cFA-dRjfi8LzJ0VrpDFyjH2ZSy1nYCDASzAo28hzaUmSKYwy879xxT5GlAOOsb45P69dh1Rb2uiTP5sXlF9_EbyLKQ8Hiqv3zgdnjGg-hWM2c8f/s1600/sulamerica.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifGLQzppP4MueTeJPSgcIFHYAAAFQblkGhOpik8CUvVPzQ11jh-jATdVqij2uf378dM-erO9ii5cFA-dRjfi8LzJ0VrpDFyjH2ZSy1nYCDASzAo28hzaUmSKYwy879xxT5GlAOOsb45P69dh1Rb2uiTP5sXlF9_EbyLKQ8Hiqv3zgdnjGg-hWM2c8f/s1600/sulamerica.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifGLQzppP4MueTeJPSgcIFHYAAAFQblkGhOpik8CUvVPzQ11jh-jATdVqij2uf378dM-erO9ii5cFA-dRjfi8LzJ0VrpDFyjH2ZSy1nYCDASzAo28hzaUmSKYwy879xxT5GlAOOsb45P69dh1Rb2uiTP5sXlF9_EbyLKQ8Hiqv3zgdnjGg-hWM2c8f/s1600/sulamerica.webp'
+      },       
+      
+      {
+        name: 'Rádio Colinas 104.9 FM de PE',
+
+        sources: [
+        { src: 'https://ssl.xcast.com.br:9906/stream', type: 'video/mp4' },
+        { src: 'https://ssl.xcast.com.br:9906/stream', type: 'audio/mpeg' },
+        { src: 'https://ssl.xcast.com.br:9906/stream', type: 'application/x-mpegurl' },
+          { src: 'https://ssl.xcast.com.br:9906/stream', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_5lN7ip6T9RkajuN_eN_LdV-MDZfFgsDIgObsHOXn5wMrYlYHBmJYzYeCLwMFZG-lcqU71wFg-YgXmH35kGKHMght1Vj1NB0ZY1pFy5sBlI_0BfI29MjG-KAqwcVE3ciN8zPUpbtqJ43Gv6E6_CuXqw_i-Z9o-4aFRBqSzphzcY9kGGRvZ5Mniy7d/s1600/radiocolina.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_5lN7ip6T9RkajuN_eN_LdV-MDZfFgsDIgObsHOXn5wMrYlYHBmJYzYeCLwMFZG-lcqU71wFg-YgXmH35kGKHMght1Vj1NB0ZY1pFy5sBlI_0BfI29MjG-KAqwcVE3ciN8zPUpbtqJ43Gv6E6_CuXqw_i-Z9o-4aFRBqSzphzcY9kGGRvZ5Mniy7d/s1600/radiocolina.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_5lN7ip6T9RkajuN_eN_LdV-MDZfFgsDIgObsHOXn5wMrYlYHBmJYzYeCLwMFZG-lcqU71wFg-YgXmH35kGKHMght1Vj1NB0ZY1pFy5sBlI_0BfI29MjG-KAqwcVE3ciN8zPUpbtqJ43Gv6E6_CuXqw_i-Z9o-4aFRBqSzphzcY9kGGRvZ5Mniy7d/s1600/radiocolina.webp'
+      },  
+      
+      {
+        name: 'Radio Mega 95.5 FM de BA',
+
+        sources: [
+        { src: 'https://ssl.srvstm.com:8210/;', type: 'video/mp4' },
+        { src: 'https://ssl.srvstm.com:8210/;', type: 'audio/mpeg' },
+        { src: 'https://ssl.srvstm.com:8210/;', type: 'application/x-mpegurl' },
+          { src: 'https://ssl.srvstm.com:8210/;', type: 'audio/ogg' },
+                   
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhc96paWaJe2iW_cuzspaSvYaZEdQu6c8zjYpAS4cW1J8cw6MObkTzn4CbJojViiWDiB8peGS1OcP-5X5PnoXR695nNyEOp1wGV2KIAyp19y1NxFbigElQko6GINMatZb99P2yuXUwdQ634d-fUH6NHGhpFvUj7NBNCiNCvfe5AOue0fY8JG1Z_IOzU/s1600/megafm.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhc96paWaJe2iW_cuzspaSvYaZEdQu6c8zjYpAS4cW1J8cw6MObkTzn4CbJojViiWDiB8peGS1OcP-5X5PnoXR695nNyEOp1wGV2KIAyp19y1NxFbigElQko6GINMatZb99P2yuXUwdQ634d-fUH6NHGhpFvUj7NBNCiNCvfe5AOue0fY8JG1Z_IOzU/s1600/megafm.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhc96paWaJe2iW_cuzspaSvYaZEdQu6c8zjYpAS4cW1J8cw6MObkTzn4CbJojViiWDiB8peGS1OcP-5X5PnoXR695nNyEOp1wGV2KIAyp19y1NxFbigElQko6GINMatZb99P2yuXUwdQ634d-fUH6NHGhpFvUj7NBNCiNCvfe5AOue0fY8JG1Z_IOzU/s1600/megafm.webp'
+      },    
+      
+      {
+        name: 'Rádio Conquista 97.7 FM de SP',
+
+        sources: [
+        { src: 'https://pontofixo-megasistema.webnow.com.br/conquista.aac', type: 'audio/ogg' },
+        { src: 'https://pontofixo-megasistema.webnow.com.br/conquista.aac', type: 'application/x-mpegurl'},
+        { src: 'https://pontofixo-megasistema.webnow.com.br/conquista.aac', type: 'audio/mpeg' },
+        { src: 'https://pontofixo-megasistema.webnow.com.br/conquista.aac', type: 'application/x-mpegurl'},
+        { src: 'https://pontofixo-megasistema.webnow.com.br/conquista.aac', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1x9WhKqndJ18CxVcRmk0X2wce0l5eYfOE2FYkdSSvirmODBHpDRBYuJ-tokxKBTR4uUqvaTcJd0omJBA4io-EN82Vea6ZSHUPgafz_bXWe97Fp2gYWTKJFfFrsRS6o4ACEIRRsD4a_y6LeZIScl015Q2Aa-2j2Sfs6jtA5V1MFq3Jo6x7ztocpwZm/s1600/conquista.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1x9WhKqndJ18CxVcRmk0X2wce0l5eYfOE2FYkdSSvirmODBHpDRBYuJ-tokxKBTR4uUqvaTcJd0omJBA4io-EN82Vea6ZSHUPgafz_bXWe97Fp2gYWTKJFfFrsRS6o4ACEIRRsD4a_y6LeZIScl015Q2Aa-2j2Sfs6jtA5V1MFq3Jo6x7ztocpwZm/s1600/conquista.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1x9WhKqndJ18CxVcRmk0X2wce0l5eYfOE2FYkdSSvirmODBHpDRBYuJ-tokxKBTR4uUqvaTcJd0omJBA4io-EN82Vea6ZSHUPgafz_bXWe97Fp2gYWTKJFfFrsRS6o4ACEIRRsD4a_y6LeZIScl015Q2Aa-2j2Sfs6jtA5V1MFq3Jo6x7ztocpwZm/s1600/conquista.webp'
+      },   
+     
+
+      {
+        name: 'Rádio A Tarde FM de Salvador',
+
+        sources: [
+        { src: 'https://live.cdn.upx.com/d4f6/myStream.sdp/playlist.m3u8', type: 'application/x-mpegurl'},
+        { src: 'https://live.cdn.upx.com/d4f6/myStream.sdp/playlist.m3u8', type: 'audio/m3u8'},
+        { src: 'https://live.cdn.upx.com/d4f6/myStream.sdp/playlist.m3u8', type: 'audio/ogg' },
+        { src: 'https://live.cdn.upx.com/d4f6/myStream.sdp/playlist.m3u8', type: 'audio/mpeg' },
+        { src: 'https://live.cdn.upx.com/d4f6/myStream.sdp/playlist.m3u8', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrG9sFHclBGWS3tg7Ycn_fPfnrg6nI5T5XmLvpXEwy1rrqPk6s2pI_FysmMDSdFGLJQwEEd6ar0PXpfaY-0d5RiquQaCafKomg1zbYwPHmKjsEXc1AFALKNxGT6_QKtfBACEgW73zVvDZEFvrXCYEcukMIHlgmoSOpA0TQFWmXfz69OrYiSj1OYYdD/s1600/radio-a-tarde-fm_crop_200x200.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrG9sFHclBGWS3tg7Ycn_fPfnrg6nI5T5XmLvpXEwy1rrqPk6s2pI_FysmMDSdFGLJQwEEd6ar0PXpfaY-0d5RiquQaCafKomg1zbYwPHmKjsEXc1AFALKNxGT6_QKtfBACEgW73zVvDZEFvrXCYEcukMIHlgmoSOpA0TQFWmXfz69OrYiSj1OYYdD/s1600/radio-a-tarde-fm_crop_200x200.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrG9sFHclBGWS3tg7Ycn_fPfnrg6nI5T5XmLvpXEwy1rrqPk6s2pI_FysmMDSdFGLJQwEEd6ar0PXpfaY-0d5RiquQaCafKomg1zbYwPHmKjsEXc1AFALKNxGT6_QKtfBACEgW73zVvDZEFvrXCYEcukMIHlgmoSOpA0TQFWmXfz69OrYiSj1OYYdD/s1600/radio-a-tarde-fm_crop_200x200.jpg'
+      },     
+      
+      {
+        name: 'Rádio Meio Norte 99.9 FM de PI',
+
+        sources: [
+        { src: 'https://webradio.amsolution.com.br/radio/8280/meionorte', type: 'audio/ogg' },
+        { src: 'https://webradio.amsolution.com.br/radio/8280/meionorte', type: 'application/x-mpegurl'},
+        { src: 'https://webradio.amsolution.com.br/radio/8280/meionorte', type: 'audio/mpeg' },
+        { src: 'https://webradio.amsolution.com.br/radio/8280/meionorte', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilz2W38HrMo1MeSQN9Ny69U2s_FFGrUmTbvUYmBipwDRMhW7K9tj_ssrJpu0lt350byMrsS8TUNLSyJR77FkluUU6ROIA-wLIqR58olPFNvt06XdU8pY709OeNiY50DEsdf1tgfrLyF2Wdv20bWny68psO6l53FLvHbvZyNXBEGq65vLf-hoWksQDc/s1600/meionorte.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilz2W38HrMo1MeSQN9Ny69U2s_FFGrUmTbvUYmBipwDRMhW7K9tj_ssrJpu0lt350byMrsS8TUNLSyJR77FkluUU6ROIA-wLIqR58olPFNvt06XdU8pY709OeNiY50DEsdf1tgfrLyF2Wdv20bWny68psO6l53FLvHbvZyNXBEGq65vLf-hoWksQDc/s1600/meionorte.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilz2W38HrMo1MeSQN9Ny69U2s_FFGrUmTbvUYmBipwDRMhW7K9tj_ssrJpu0lt350byMrsS8TUNLSyJR77FkluUU6ROIA-wLIqR58olPFNvt06XdU8pY709OeNiY50DEsdf1tgfrLyF2Wdv20bWny68psO6l53FLvHbvZyNXBEGq65vLf-hoWksQDc/s1600/meionorte.webp'
+      },  
+
+      {
+        name: 'Rádio Tropical 107.9 FM de SP',
+
+        sources: [
+        { src: 'https://8199.brasilstream.com.br/stream', type: 'audio/ogg' },
+        { src: 'https://8199.brasilstream.com.br/stream', type: 'application/x-mpegurl'},
+        { src: 'https://8199.brasilstream.com.br/stream', type: 'audio/mpeg' },
+        { src: 'https://8199.brasilstream.com.br/stream', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihErHAg1YCaTauX17nqzHCeEfj9-DQa4tlKjJkLX7VVgS2curgiyW47oU1mZaBlFMOje9IA6DxkGxeG3hRJAyShiH5xMRjAcS2p0yPeajOSaGRiGQ85ObMEAILjJl8qKaMzOYl-ogMALsi4QFXSOBx0jgX3T2i1-JQyoNyDd6f-eC8-OkmWq3W651u/s1600/tropicalfm.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihErHAg1YCaTauX17nqzHCeEfj9-DQa4tlKjJkLX7VVgS2curgiyW47oU1mZaBlFMOje9IA6DxkGxeG3hRJAyShiH5xMRjAcS2p0yPeajOSaGRiGQ85ObMEAILjJl8qKaMzOYl-ogMALsi4QFXSOBx0jgX3T2i1-JQyoNyDd6f-eC8-OkmWq3W651u/s1600/tropicalfm.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihErHAg1YCaTauX17nqzHCeEfj9-DQa4tlKjJkLX7VVgS2curgiyW47oU1mZaBlFMOje9IA6DxkGxeG3hRJAyShiH5xMRjAcS2p0yPeajOSaGRiGQ85ObMEAILjJl8qKaMzOYl-ogMALsi4QFXSOBx0jgX3T2i1-JQyoNyDd6f-eC8-OkmWq3W651u/s1600/tropicalfm.webp'
+      },  
+      
+      {
+        name: 'Rádio Ótima 90.3 FM de SP',
+
+        sources: [
+        { src: 'https://ice.fabricahost.com.br/otimafm903', type: 'audio/ogg' },
+        { src: 'https://ice.fabricahost.com.br/otimafm903', type: 'application/x-mpegurl'},
+        { src: 'https://ice.fabricahost.com.br/otimafm903', type: 'audio/mpeg' },
+        { src: 'https://ice.fabricahost.com.br/otimafm903', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_mL0ieaITpVTHDj_v0W-T-Zn-4KSSLUkBA4LRxFgIrtpq8W_UZ_kdT6gOxS_b2ZiWovrxr-f2io4kcFZRIfna6F3Ta8FmYcbjKRQXGu5QxvDA484NpxML9xqfoppzDo7KukEdztb8RCndrUxKkLBu0deE7d0X2M8yA0h-MT0aVYGzvJNrTtfSGgqd/s1600/otimfm.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_mL0ieaITpVTHDj_v0W-T-Zn-4KSSLUkBA4LRxFgIrtpq8W_UZ_kdT6gOxS_b2ZiWovrxr-f2io4kcFZRIfna6F3Ta8FmYcbjKRQXGu5QxvDA484NpxML9xqfoppzDo7KukEdztb8RCndrUxKkLBu0deE7d0X2M8yA0h-MT0aVYGzvJNrTtfSGgqd/s1600/otimfm.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_mL0ieaITpVTHDj_v0W-T-Zn-4KSSLUkBA4LRxFgIrtpq8W_UZ_kdT6gOxS_b2ZiWovrxr-f2io4kcFZRIfna6F3Ta8FmYcbjKRQXGu5QxvDA484NpxML9xqfoppzDo7KukEdztb8RCndrUxKkLBu0deE7d0X2M8yA0h-MT0aVYGzvJNrTtfSGgqd/s1600/otimfm.jpg'
+      },   
+      
+      {
+        name: 'Rádio Band Vale 102.9 FM de SP',
+
+        sources: [
+        { src: 'https://centova5.transmissaodigital.com:20061/;', type: 'audio/ogg' },
+        { src: 'https://centova5.transmissaodigital.com:20061/;', type: 'application/x-mpegurl'},
+        { src: 'https://centova5.transmissaodigital.com:20061/;', type: 'audio/mpeg' },
+        { src: 'https://centova5.transmissaodigital.com:20061/;', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwpq_Q230TpScTtej3JWzKboJsoG7-HFml3LenxhkiBOn7NoDBe8JcIkT3_ywZvXLMvr4v5PGSz4myaQW47CSC7BeIlSI9NQRETS2fOepJYP5Bt46VLcbSpXjuDIzCUzdpAeW3nE9xbr-j-9d3IZdYxog8PZ3wCeyO4g98E3Jv38exFuf8Ndz19wmn/s1600/bandvale.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwpq_Q230TpScTtej3JWzKboJsoG7-HFml3LenxhkiBOn7NoDBe8JcIkT3_ywZvXLMvr4v5PGSz4myaQW47CSC7BeIlSI9NQRETS2fOepJYP5Bt46VLcbSpXjuDIzCUzdpAeW3nE9xbr-j-9d3IZdYxog8PZ3wCeyO4g98E3Jv38exFuf8Ndz19wmn/s1600/bandvale.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwpq_Q230TpScTtej3JWzKboJsoG7-HFml3LenxhkiBOn7NoDBe8JcIkT3_ywZvXLMvr4v5PGSz4myaQW47CSC7BeIlSI9NQRETS2fOepJYP5Bt46VLcbSpXjuDIzCUzdpAeW3nE9xbr-j-9d3IZdYxog8PZ3wCeyO4g98E3Jv38exFuf8Ndz19wmn/s1600/bandvale.webp'
+      },  
+      
+      {
+        name: 'Rádio Viva 94.5 FM de RS',
+
+        sources: [
+        { src: 'https://r6.ciclano.io:15030/stream', type: 'audio/ogg' },
+        { src: 'https://r6.ciclano.io:15030/stream', type: 'application/x-mpegurl'},
+        { src: 'https://r6.ciclano.io:15030/stream', type: 'audio/mpeg' },
+        { src: 'https://r6.ciclano.io:15030/stream', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh354L4nC-HmBB5DaziY6EwYXpW0nDkyZr0Rc9skVJG7KbKwQw5Gac22VUIrF6EDbD42ZpSivtxNhL5gLSoW4TpbiuI6VoDL0cx57paJcydp-z_pkKLjW4AxV2XZ5o7bdtC8y-NYcMRP3uaDM5xtk5OH6SnRhSam9hqs-i2M2QSkiGo4Q9j63erp-H7/s1600/radioviva-logo200.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh354L4nC-HmBB5DaziY6EwYXpW0nDkyZr0Rc9skVJG7KbKwQw5Gac22VUIrF6EDbD42ZpSivtxNhL5gLSoW4TpbiuI6VoDL0cx57paJcydp-z_pkKLjW4AxV2XZ5o7bdtC8y-NYcMRP3uaDM5xtk5OH6SnRhSam9hqs-i2M2QSkiGo4Q9j63erp-H7/s1600/radioviva-logo200.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh354L4nC-HmBB5DaziY6EwYXpW0nDkyZr0Rc9skVJG7KbKwQw5Gac22VUIrF6EDbD42ZpSivtxNhL5gLSoW4TpbiuI6VoDL0cx57paJcydp-z_pkKLjW4AxV2XZ5o7bdtC8y-NYcMRP3uaDM5xtk5OH6SnRhSam9hqs-i2M2QSkiGo4Q9j63erp-H7/s1600/radioviva-logo200.jpg'
+      },  
+      
+      {
+        name: 'Rádio Top 104.1 FM de SP',
+
+        sources: [
+        { src: 'https://centova.svdns.com.br:20019/stream', type: 'audio/ogg' },
+        { src: 'https://centova.svdns.com.br:20019/stream', type: 'application/x-mpegurl'},
+        { src: 'https://centova.svdns.com.br:20019/stream', type: 'audio/mpeg' },
+        { src: 'https://centova.svdns.com.br:20019/stream', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgb9auWh2TENu1UlmtgFKS7tCtiEXbs1GJMnlMY_Vmhf8r53sb7D-VsfVHCf0BYL_9gQ2UcECbLovuiCjqzXTue6gta7WKFmYCEryuWPkgW9YJxmMef_SN69obXIyS7SDMdceROEIw3l5GWwfE2mcv2ModwfzvAXYXP_gJS0ZTUMegNrxJ9WPAdAS_r/s1600/topfm200.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgb9auWh2TENu1UlmtgFKS7tCtiEXbs1GJMnlMY_Vmhf8r53sb7D-VsfVHCf0BYL_9gQ2UcECbLovuiCjqzXTue6gta7WKFmYCEryuWPkgW9YJxmMef_SN69obXIyS7SDMdceROEIw3l5GWwfE2mcv2ModwfzvAXYXP_gJS0ZTUMegNrxJ9WPAdAS_r/s1600/topfm200.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgb9auWh2TENu1UlmtgFKS7tCtiEXbs1GJMnlMY_Vmhf8r53sb7D-VsfVHCf0BYL_9gQ2UcECbLovuiCjqzXTue6gta7WKFmYCEryuWPkgW9YJxmMef_SN69obXIyS7SDMdceROEIw3l5GWwfE2mcv2ModwfzvAXYXP_gJS0ZTUMegNrxJ9WPAdAS_r/s1600/topfm200.jpg'
+      },  
+      
+      {
+        name: 'Rádio Novo Tempo 92.5 FM de CE',
+
+        sources: [
+        { src: 'https://servidor28-3.brlogic.com:8274/live', type: 'audio/ogg' },
+        { src: 'https://servidor28-3.brlogic.com:8274/live', type: 'application/x-mpegurl'},
+        { src: 'https://servidor28-3.brlogic.com:8274/live', type: 'audio/mpeg' },
+        { src: 'https://servidor28-3.brlogic.com:8274/live', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA4-N8_X3TG07qZbv3bfMP2vTW37o0e3kHGO1ZOJq1CLBEHIQUZ957-SbFsQB4P_qwLgA6W6dXyEp2aYrd3M--TT_G0UPPQ5rMskATPNOfdTfuU1hvtdQ7xpDGGvTkoqUCZyakeJ2_gfHOXnUzhv7vfLoRVuRSLeZQxpETGdKsXgWEevaBpz_b6Hjq/s1600/novotempo.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA4-N8_X3TG07qZbv3bfMP2vTW37o0e3kHGO1ZOJq1CLBEHIQUZ957-SbFsQB4P_qwLgA6W6dXyEp2aYrd3M--TT_G0UPPQ5rMskATPNOfdTfuU1hvtdQ7xpDGGvTkoqUCZyakeJ2_gfHOXnUzhv7vfLoRVuRSLeZQxpETGdKsXgWEevaBpz_b6Hjq/s1600/novotempo.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA4-N8_X3TG07qZbv3bfMP2vTW37o0e3kHGO1ZOJq1CLBEHIQUZ957-SbFsQB4P_qwLgA6W6dXyEp2aYrd3M--TT_G0UPPQ5rMskATPNOfdTfuU1hvtdQ7xpDGGvTkoqUCZyakeJ2_gfHOXnUzhv7vfLoRVuRSLeZQxpETGdKsXgWEevaBpz_b6Hjq/s1600/novotempo.webp'
+      },    
+      
+      {
+        name: 'Rádio FM 90.3 de MG',
+
+        sources: [
+        { src: 'https://9897.brasilstream.com.br/stream', type: 'audio/ogg' },
+        { src: 'https://9897.brasilstream.com.br/stream', type: 'application/x-mpegurl'},
+        { src: 'https://9897.brasilstream.com.br/stream', type: 'audio/mpeg' },
+        { src: 'https://9897.brasilstream.com.br/stream', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRcZ0PiUEwPrpOCss3BQpbQ8z813eGGY7wgaFleVuNtTaJEWLQV5C1Dq_4Mj0dQT6RMo66EjXcJmRsytXdJFVqTIFR6c9x_iXenVOcbX6scBuzDyG9CXhDzJbL6XJPB93oRFT-3jb6qDT5oL3-sGsnIzZyOSLrrTO9n8sjkDBE28DvOIQpgY-UMlu4/s1600/90.3fm.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRcZ0PiUEwPrpOCss3BQpbQ8z813eGGY7wgaFleVuNtTaJEWLQV5C1Dq_4Mj0dQT6RMo66EjXcJmRsytXdJFVqTIFR6c9x_iXenVOcbX6scBuzDyG9CXhDzJbL6XJPB93oRFT-3jb6qDT5oL3-sGsnIzZyOSLrrTO9n8sjkDBE28DvOIQpgY-UMlu4/s1600/90.3fm.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRcZ0PiUEwPrpOCss3BQpbQ8z813eGGY7wgaFleVuNtTaJEWLQV5C1Dq_4Mj0dQT6RMo66EjXcJmRsytXdJFVqTIFR6c9x_iXenVOcbX6scBuzDyG9CXhDzJbL6XJPB93oRFT-3jb6qDT5oL3-sGsnIzZyOSLrrTO9n8sjkDBE28DvOIQpgY-UMlu4/s1600/90.3fm.jpg'
+      },   
+      
+      {
+        name: 'Rádio Cidade 106.5 FM de RJ',
+
+        sources: [
+        { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOCIDADEAAC.aac', type: 'audio/ogg' },
+        { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOCIDADEAAC.aac', type: 'application/x-mpegurl'},
+        { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOCIDADEAAC.aac', type: 'audio/mpeg' },
+        { src: 'https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOCIDADEAAC.aac', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSNEBHSxZ_3shn0bRAZKVVEZATH-p4ebeflnXNFn7O0N9eHAz-81m2rfg-bc9CrTOV7fxh2z9lJh-BP9M4whh3PaYdpdDZ2fMMVVHuFAoT945e21WI50PlNKwSSyn052nHR0nA1bNM7BzIbRYKmyG0BAh437S4c3biqzwMpCt8GqzA_54s3DyvzVWi/s1600/radiocidade.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSNEBHSxZ_3shn0bRAZKVVEZATH-p4ebeflnXNFn7O0N9eHAz-81m2rfg-bc9CrTOV7fxh2z9lJh-BP9M4whh3PaYdpdDZ2fMMVVHuFAoT945e21WI50PlNKwSSyn052nHR0nA1bNM7BzIbRYKmyG0BAh437S4c3biqzwMpCt8GqzA_54s3DyvzVWi/s1600/radiocidade.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSNEBHSxZ_3shn0bRAZKVVEZATH-p4ebeflnXNFn7O0N9eHAz-81m2rfg-bc9CrTOV7fxh2z9lJh-BP9M4whh3PaYdpdDZ2fMMVVHuFAoT945e21WI50PlNKwSSyn052nHR0nA1bNM7BzIbRYKmyG0BAh437S4c3biqzwMpCt8GqzA_54s3DyvzVWi/s1600/radiocidade.webp'
+      },   
+      
+      {
+        name: 'Rádio Líder 99.9 FM de RS',
+
+        sources: [
+        { src: 'https://i9suaradio.com:7065/stream', type: 'audio/ogg' },
+        { src: 'https://i9suaradio.com:7065/stream', type: 'application/x-mpegurl'},
+        { src: 'https://i9suaradio.com:7065/stream', type: 'audio/mpeg' },
+        { src: 'https://i9suaradio.com:7065/stream', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9-YylDWiUd86_h2-dZ06psj3bP_cMPC_nJ9qAg191bPwfyhHHpjZTTasSONk7d8W_jVw7Q7r7j_vTnd13iFDJ58mxIL4l9KOmCYvFBiId94VMHNFr4rPnEINLGVZJWAm_qctI-NbraKaW5NnEQSY3SAdfnOIeyYIGRurS52j4QWSW_Q6KCL7-W6s2/s1600/liderfm.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9-YylDWiUd86_h2-dZ06psj3bP_cMPC_nJ9qAg191bPwfyhHHpjZTTasSONk7d8W_jVw7Q7r7j_vTnd13iFDJ58mxIL4l9KOmCYvFBiId94VMHNFr4rPnEINLGVZJWAm_qctI-NbraKaW5NnEQSY3SAdfnOIeyYIGRurS52j4QWSW_Q6KCL7-W6s2/s1600/liderfm.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9-YylDWiUd86_h2-dZ06psj3bP_cMPC_nJ9qAg191bPwfyhHHpjZTTasSONk7d8W_jVw7Q7r7j_vTnd13iFDJ58mxIL4l9KOmCYvFBiId94VMHNFr4rPnEINLGVZJWAm_qctI-NbraKaW5NnEQSY3SAdfnOIeyYIGRurS52j4QWSW_Q6KCL7-W6s2/s1600/liderfm.webp'
+      },  
+
+      {
+        name: 'Rádio Terra 96.5 FM de SP',
+
+        sources: [
+        { src: 'https://cloud1.cdnseguro.com:25986/stream', type: 'audio/ogg' },
+        { src: 'https://cloud1.cdnseguro.com:25986/stream', type: 'application/x-mpegurl'},
+        { src: 'https://cloud1.cdnseguro.com:25986/stream', type: 'audio/mpeg' },
+        { src: 'https://cloud1.cdnseguro.com:25986/stream', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgY44ALdFIl7uu3FzSt3NXhhEZrTJrajen-4hGIbASmCrobAP-kZc_61f83ucV2CQRgAZIJwOuYlMuAaoyN9Idvi63SoXtoMH_ylrYAqenCXq59jRGNKwT9ckYNiRZm2Weo6ow_Rnr0_D9XZhZxZoxstcP0xp9UT7V5qcGvrTpuauHSp7OxxYdizxc0/s1600/terrafmsp.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgY44ALdFIl7uu3FzSt3NXhhEZrTJrajen-4hGIbASmCrobAP-kZc_61f83ucV2CQRgAZIJwOuYlMuAaoyN9Idvi63SoXtoMH_ylrYAqenCXq59jRGNKwT9ckYNiRZm2Weo6ow_Rnr0_D9XZhZxZoxstcP0xp9UT7V5qcGvrTpuauHSp7OxxYdizxc0/s1600/terrafmsp.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgY44ALdFIl7uu3FzSt3NXhhEZrTJrajen-4hGIbASmCrobAP-kZc_61f83ucV2CQRgAZIJwOuYlMuAaoyN9Idvi63SoXtoMH_ylrYAqenCXq59jRGNKwT9ckYNiRZm2Weo6ow_Rnr0_D9XZhZxZoxstcP0xp9UT7V5qcGvrTpuauHSp7OxxYdizxc0/s1600/terrafmsp.webp'
+      },    
+      
+      {
+        name: 'Rádio Banda B 550 AM 79.3 FM de PR',
+
+        sources: [
+        { src: 'https://ice.fabricahost.com.br/bandabctb', type: 'audio/ogg' },
+        { src: 'https://ice.fabricahost.com.br/bandabctb', type: 'application/x-mpegurl'},
+        { src: 'https://ice.fabricahost.com.br/bandabctb', type: 'audio/mpeg' },
+        { src: 'https://ice.fabricahost.com.br/bandabctb', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7dOcHRkmEmRwW9OS7U0fBxCJe8_TjXreabh6XQxBudBGLILUbk0mEWwR69OELcoR5DjW27Kalrk3GPR7WqqDHoINEdOGl_zwspWBLB8xW74REQprK9tEt0rx3LqkODKR2a64qmGVzMMOua_JqdUhdXiENABSILHdp3_43eWsXs9ioTn4GSIzwifkk/s1600/bandab.jpg',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7dOcHRkmEmRwW9OS7U0fBxCJe8_TjXreabh6XQxBudBGLILUbk0mEWwR69OELcoR5DjW27Kalrk3GPR7WqqDHoINEdOGl_zwspWBLB8xW74REQprK9tEt0rx3LqkODKR2a64qmGVzMMOua_JqdUhdXiENABSILHdp3_43eWsXs9ioTn4GSIzwifkk/s1600/bandab.jpg'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7dOcHRkmEmRwW9OS7U0fBxCJe8_TjXreabh6XQxBudBGLILUbk0mEWwR69OELcoR5DjW27Kalrk3GPR7WqqDHoINEdOGl_zwspWBLB8xW74REQprK9tEt0rx3LqkODKR2a64qmGVzMMOua_JqdUhdXiENABSILHdp3_43eWsXs9ioTn4GSIzwifkk/s1600/bandab.jpg'
+      },  
+      
+      {
+        name: 'Rádio 98 FM de RN',
+
+        sources: [
+        { src: 'https://radio98.jmvstream.com/stream', type: 'audio/ogg' },
+        { src: 'https://radio98.jmvstream.com/stream', type: 'application/x-mpegurl'},
+        { src: 'https://radio98.jmvstream.com/stream', type: 'audio/mpeg' },
+        { src: 'https://radio98.jmvstream.com/stream', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDsY-7w6Vx59iDaCNSCky3j-D6hPErPLhx57d8ya8tq1JNdoS6DobNDqIYpGZCtsjzbBdfo3Ock8mB_Smn_n9GmZmOrLNV2C5WI7pxW-5ReFFO-x8-okVN8uV7UDWtHq8laIDEp4WcnvYEQ_bz8WIjyB8XpMpbpkQqJc0EbC5FcP1tDUMh-sa5ld-o/s1600/98fm.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDsY-7w6Vx59iDaCNSCky3j-D6hPErPLhx57d8ya8tq1JNdoS6DobNDqIYpGZCtsjzbBdfo3Ock8mB_Smn_n9GmZmOrLNV2C5WI7pxW-5ReFFO-x8-okVN8uV7UDWtHq8laIDEp4WcnvYEQ_bz8WIjyB8XpMpbpkQqJc0EbC5FcP1tDUMh-sa5ld-o/s1600/98fm.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDsY-7w6Vx59iDaCNSCky3j-D6hPErPLhx57d8ya8tq1JNdoS6DobNDqIYpGZCtsjzbBdfo3Ock8mB_Smn_n9GmZmOrLNV2C5WI7pxW-5ReFFO-x8-okVN8uV7UDWtHq8laIDEp4WcnvYEQ_bz8WIjyB8XpMpbpkQqJc0EbC5FcP1tDUMh-sa5ld-o/s1600/98fm.webp'
+      },
+      
+      {
+        name: 'Rádio Aparecida 104.3 FM de SP',
+
+        sources: [
+        { src: 'https://aparecida.jmvstream.com/stream', type: 'audio/ogg' },
+        { src: 'https://aparecida.jmvstream.com/stream', type: 'application/x-mpegurl'},
+        { src: 'https://aparecida.jmvstream.com/stream', type: 'audio/mpeg' },
+        { src: 'https://aparecida.jmvstream.com/stream', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5c3k0vYs3SEKeDQpt8Cdwd7CTcWte3U5RWsUjDQ6kfogghxbfJhz8IgSKn6XAK7SXJ2aHCmQvPy5KkNSe5lfPRbcKaRr6iKBwytFab9s-_KoVmWLRB50TopLlu__1mNyJ4Ff4w0NlH8ND7lml9ZuzIP434q4_wc_qXUvlb2eXrQlRtBVd58gT_YCU/s1600/radioaparecida.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5c3k0vYs3SEKeDQpt8Cdwd7CTcWte3U5RWsUjDQ6kfogghxbfJhz8IgSKn6XAK7SXJ2aHCmQvPy5KkNSe5lfPRbcKaRr6iKBwytFab9s-_KoVmWLRB50TopLlu__1mNyJ4Ff4w0NlH8ND7lml9ZuzIP434q4_wc_qXUvlb2eXrQlRtBVd58gT_YCU/s1600/radioaparecida.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5c3k0vYs3SEKeDQpt8Cdwd7CTcWte3U5RWsUjDQ6kfogghxbfJhz8IgSKn6XAK7SXJ2aHCmQvPy5KkNSe5lfPRbcKaRr6iKBwytFab9s-_KoVmWLRB50TopLlu__1mNyJ4Ff4w0NlH8ND7lml9ZuzIP434q4_wc_qXUvlb2eXrQlRtBVd58gT_YCU/s1600/radioaparecida.webp'
+      },      
+
+      {
+        name: 'Rádio Viola Foz 91.7 FM de PR',
+
+        sources: [
+        { src: 'https://ice.fabricahost.com.br/radioviolafoz', type: 'audio/ogg' },
+        { src: 'https://ice.fabricahost.com.br/radioviolafoz', type: 'application/x-mpegurl'},
+        { src: 'https://ice.fabricahost.com.br/radioviolafoz', type: 'audio/mpeg' },
+        { src: 'https://ice.fabricahost.com.br/radioviolafoz', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOoRATTBGc7752FAIRvmmEqNmbfmdj-qYgBQssuGcIJ10-OTjJ8w4stvYZQ5eSI30NboZJ6rtrm9FRLcqpMyM0TRLWW8dd_CDXL5cthFI7yz8wseYi0u7p-yHnvDL9cuW1ArmPrt9hXcDJ0wdJofmOcPqnr10kdCngpTbj9df4g11yBxp2gvWtBPd2/s1600/violfoz.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOoRATTBGc7752FAIRvmmEqNmbfmdj-qYgBQssuGcIJ10-OTjJ8w4stvYZQ5eSI30NboZJ6rtrm9FRLcqpMyM0TRLWW8dd_CDXL5cthFI7yz8wseYi0u7p-yHnvDL9cuW1ArmPrt9hXcDJ0wdJofmOcPqnr10kdCngpTbj9df4g11yBxp2gvWtBPd2/s1600/violfoz.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOoRATTBGc7752FAIRvmmEqNmbfmdj-qYgBQssuGcIJ10-OTjJ8w4stvYZQ5eSI30NboZJ6rtrm9FRLcqpMyM0TRLWW8dd_CDXL5cthFI7yz8wseYi0u7p-yHnvDL9cuW1ArmPrt9hXcDJ0wdJofmOcPqnr10kdCngpTbj9df4g11yBxp2gvWtBPd2/s1600/violfoz.webp'
+      }, 
+      
+      {
+        name: 'Rádio Scalla Instrumental',
+
+        sources: [
+        { src: 'https://hts02.kshost.com.br:9710/live', type: 'audio/ogg' },
+        { src: 'https://hts02.kshost.com.br:9710/live', type: 'application/x-mpegurl'},
+        { src: 'https://hts02.kshost.com.br:9710/live', type: 'audio/mpeg' },
+        { src: 'https://hts02.kshost.com.br:9710/live', type: 'video/mp4' },
+					{audioOnly: 'true',
+					mutedAutoplay: 'false',
+					live: 'true',},          
+
+
+        ],
+
+        thumbnail: [
+          {
+            srcset: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhS6_U2mDfpc6G6U6xv1iCgKB4b8UNu0RYfgEvd-jKs9szXfbj6FBxu5sbnNlZ1weLXWdXYQI-QoG_MLNveTQnjJDyiHI5SVdQgXH1W_RMRMLJoPNQ4UtwypiBFl0ulZj3-ZUds6NQ_YKq4L7g85M3GMrzl7riG3pOob7t10f82_lcXkzlVEH8KIXAS/s1600/skalafm.webp',
+            type: 'image/png',
+            media: '(min-width: 400px;)'
+          },
+          {
+            src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhS6_U2mDfpc6G6U6xv1iCgKB4b8UNu0RYfgEvd-jKs9szXfbj6FBxu5sbnNlZ1weLXWdXYQI-QoG_MLNveTQnjJDyiHI5SVdQgXH1W_RMRMLJoPNQ4UtwypiBFl0ulZj3-ZUds6NQ_YKq4L7g85M3GMrzl7riG3pOob7t10f82_lcXkzlVEH8KIXAS/s1600/skalafm.webp'
+          }
+        ],
+        poster: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhS6_U2mDfpc6G6U6xv1iCgKB4b8UNu0RYfgEvd-jKs9szXfbj6FBxu5sbnNlZ1weLXWdXYQI-QoG_MLNveTQnjJDyiHI5SVdQgXH1W_RMRMLJoPNQ4UtwypiBFl0ulZj3-ZUds6NQ_YKq4L7g85M3GMrzl7riG3pOob7t10f82_lcXkzlVEH8KIXAS/s1600/skalafm.webp'
+      },        
+
+
+
+      ]);
+
+
+
+
+
+
+
+      player.playlistUi({ horizontal: true },);
+      player.playlist.autoadvance(0);
+
+
+
+
+
+
+
+    </script>
+
+
+    <script>
+      (function (window, videojs) {
+        var options = {
+          fullscreen: {
+            enterOnRotate: true,
+            exitOnRotate: true,
+            lockOnRotate: true,
+            iOS: false,
+            disabled: false
+          },
+          touchControls: {
+            seekSeconds: 10,
+            tapTimeout: 300,
+            disableOnEnd: false,
+            disabled: false
+          }
+        };
+
+        var url = new URL(window.location);
+        if (url.searchParams.has('options')) {
+          options = JSON.parse(url.searchParams.get('options'));
+        }
+
+        console.log(JSON.stringify(options, null, 2));
+
+        Object.keys(options).forEach(function (section) {
+          Object.keys(options[section]).forEach(function (prop) {
+            const val = options[section][prop];
+
+            if (prop === 'disabled') {
+              prop = `${section}Disabled`;
+            }
+
+            if (typeof val === 'boolean') {
+              document.getElementById(prop).checked = val;
+            }
+            if (typeof val === 'number') {
+              document.getElementById(prop).value = val;
+            }
+          });
+        });
+
+        document.getElementById('options').querySelectorAll('input').forEach(function (opt) {
+          opt.addEventListener('change', function () {
+            if (this.type === 'checkbox') {
+              const param = this.id.endsWith('Disabled') ? 'disabled' : this.id;
+
+              options[this.getAttribute('data-section')][param] = this.checked;
+            } else {
+              options[this.getAttribute('data-section')][this.id] = parseFloat(this.value);
+            }
+            console.log(options);
+          });
+        });
+
+        document.getElementById('reload').addEventListener('click', function () {
+          url.searchParams.set('options', JSON.stringify(options));
+
+          window.location = url.href;
+        })
+
+        window.addEventListener('orientationchange', function () {
+          var el = document.createElement('li');
+          var message = (new Date).toTimeString().split(' ')[0] + ' ' + window.orientation;
+          message += (screen && screen.orientation ? ' ' + screen.orientation.type + ' ' + screen.orientation.angle : '');
+          el.textContent = message;
+          console.log(message);
+          document.getElementById('log').appendChild(el);
+        });
+
+        var testPlayer = window.testPlayer = videojs('videojs-mobile-ui-player');
+        testPlayer.endscreen = function () { };
+        testPlayer.mobileUi(options);
+      }(window, window.videojs));
+    </script>
+
+<script type="text/javascript" >
+
+  
+</script>   
+
+
+</body>
+
+</html>
