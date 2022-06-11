@@ -30,14 +30,21 @@ if ($(this).scrollTop() > 1){
          text-align: center; background-color: blanchedalmond;  
          font-size: 24px;  
          } 
+         #pele {
+  background-color: #00CED1;
+  position: fixed;
+  width: 100%;
 
+
+  border-radius: 0.5rem;
+}
          header{
   position: fixed;
   width: 100%;
   text-align: center;
   font-size: 72px;
   line-height: 108px;
-  height: 108px;
+  height: 10%;
   background: #335C7D;
   color: #fff;
   font-family: 'PT Sans', sans-serif;
@@ -67,20 +74,23 @@ header.sticky {
         }
 
   
-  audio::-webkit-media-controls-timeline { display:inline-flex;}
+  audio::-webkit-media-controls-timeline { display:inline-block;}
   
-    audio::-webkit-media-controls-panel {background-color: #335C7D; width: 300px;}
+    audio::-webkit-media-controls-panel {background-color:#00CED1; width: 100%;}
         </style>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
-        <center>
-<header>
+      <center><div id="pele">
+        
+
+  
+
 
           <audio controls="" id="audioPlayer" preload="auto" tabindex="0">
      
             <source src="https://drive.google.com/uc?export&amp;id=13c0_LlrovyUFKVBzfSXxKbNHKoplD1Ie" type="audio/mp3"></source>
-          </audio>     </header>  </center><center>
+          </audio>    </div>   </center><center>
          <p1></p1> </br>
          <p1></p1> </br>
          <p1> </br</p1>
